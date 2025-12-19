@@ -1,0 +1,87 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Zafran",
+            "price": 45.95,
+            "description": "Transform your car interior with our exquisite Royal Persian Mat. Featuring intricate traditional patterns woven with premium materials, this luxury car carpet brings timeless oriental elegance to your vehicle. Easy to clean and durable for everyday use.",
+            "images": [
+                "img/zafran_type1_1.png"
+            ],
+            "sizes": [
+                "Version 1",
+                "Version 2"
+            ],
+            "variants": {
+                "Version-1": "40000000001",
+                "Version-2": "40000000002"
+            },
+            "qna": [
+                {
+                    "question": "What materials are used?",
+                    "answer": "Our car carpets are crafted from premium polyester blend with a non-slip rubber backing for safety and durability."
+                },
+                {
+                    "question": "Are these easy to clean?",
+                    "answer": "Yes! Simply remove from your car and shake off debris. For deeper cleaning, vacuum or hand wash with mild soap and water. Air dry before reinstalling."
+                },
+                {
+                    "question": "Will this fit my car?",
+                    "answer": "Our Universal size fits most standard vehicles. For larger SUVs or trucks, we recommend the Large or XL sizes. Check your vehicle's floor dimensions for the best fit."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Matte TEST 2",
+            "price": 45.95,
+            "description": "Transform your car interior with our exquisite Royal Persian Mat. Featuring intricate traditional patterns woven with premium materials, this luxury car carpet brings timeless oriental elegance to your vehicle. Easy to clean and durable for everyday use.",
+            "images": [
+                "img/layl_type1_1.png"
+            ],
+            "sizes": [
+                "Version 1",
+                "Version 2"
+            ],
+            "variants": {
+                "Version-1": "40000000001",
+                "Version-2": "40000000002"
+            },
+            "qna": [
+                {
+                    "question": "What materials are used?",
+                    "answer": "Our car carpets are crafted from premium polyester blend with a non-slip rubber backing for safety and durability."
+                },
+                {
+                    "question": "Are these easy to clean?",
+                    "answer": "Yes! Simply remove from your car and shake off debris. For deeper cleaning, vacuum or hand wash with mild soap and water. Air dry before reinstalling."
+                },
+                {
+                    "question": "Will this fit my car?",
+                    "answer": "Our Universal size fits most standard vehicles. For larger SUVs or trucks, we recommend the Large or XL sizes. Check your vehicle's floor dimensions for the best fit."
+                }
+            ]
+        }
+    ],
+    "shopify": {
+        "storeName": "your-store-name.myshopify.com"
+    },
+    "policies": {
+        "shipping": {
+            "title": "Shipping Information",
+            "content": "<h3>Free Worldwide Shipping</h3><p>We offer complimentary shipping on all orders over $50. Orders are processed within 1-2 business days and typically arrive within:</p><ul><li><strong>Domestic (US):</strong> 3-5 business days</li><li><strong>Europe:</strong> 5-7 business days</li><li><strong>International:</strong> 7-14 business days</li></ul><p>Tracking information will be sent to your email once your order ships.</p><h3>Express Shipping</h3><p>Need it faster? Express shipping options are available at checkout for expedited delivery.</p>"
+        },
+        "returns": {
+            "title": "Returns & Refunds",
+            "content": "<h3>30-Day Return Policy</h3><p>We want you to love your purchase. If you're not completely satisfied, return it within 30 days for a full refund.</p><h3>How to Return</h3><ol><li>Contact our support team at support@zahrato.com</li><li>Receive your prepaid return label</li><li>Pack items in original packaging</li><li>Drop off at any shipping location</li></ol><p>Refunds are processed within 5-7 business days after we receive your return.</p>"
+        },
+        "faq": {
+            "title": "FAQs",
+            "content": "<h3>How do I track my order?</h3><p>Once shipped, you'll receive an email with tracking information. You can also log into your account to view order status.</p><h3>Do you ship internationally?</h3><p>Yes! We ship to over 100 countries worldwide.</p><h3>What payment methods do you accept?</h3><p>We accept all major credit cards, PayPal, Apple Pay, and Google Pay through our secure Shopify checkout.</p><h3>How do I care for my car carpet?</h3><p>Remove and shake out debris regularly. For deep cleaning, vacuum or hand wash with mild soap and air dry.</p>"
+        },
+        "sizeGuide": {
+            "title": "Size Guide",
+            "content": "<h3>Find Your Perfect Fit</h3><table style='width:100%;border-collapse:collapse;margin:1rem 0;'><tr style='border-bottom:1px solid rgba(255,255,255,0.2);'><th style='padding:0.75rem;text-align:left;'>Size</th><th style='padding:0.75rem;text-align:left;'>Dimensions</th><th style='padding:0.75rem;text-align:left;'>Best For</th></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:0.75rem;'>Universal</td><td style='padding:0.75rem;'>45cm × 65cm</td><td style='padding:0.75rem;'>Most Sedans</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:0.75rem;'>Small</td><td style='padding:0.75rem;'>40cm × 55cm</td><td style='padding:0.75rem;'>Compact Cars</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:0.75rem;'>Medium</td><td style='padding:0.75rem;'>45cm × 65cm</td><td style='padding:0.75rem;'>Mid-size Sedans</td></tr><tr style='border-bottom:1px solid rgba(255,255,255,0.1);'><td style='padding:0.75rem;'>Large</td><td style='padding:0.75rem;'>50cm × 75cm</td><td style='padding:0.75rem;'>SUVs, Crossovers</td></tr><tr><td style='padding:0.75rem;'>XL</td><td style='padding:0.75rem;'>55cm × 85cm</td><td style='padding:0.75rem;'>Trucks, Large SUVs</td></tr></table><p>Tip: Measure your vehicle's floor area before ordering for the best fit.</p>"
+        }
+    }
+}

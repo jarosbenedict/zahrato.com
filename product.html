@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZAHRATO - Shop our premium oriental car carpets">
+    <title>Product - ZAHRATO</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <!-- Mobile Toggle (Left) -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a href="index.html" class="logo">ZAHRATO</a>
+
+            <nav class="nav-main" id="mainNav">
+                <a href="index.html">Home</a>
+                <a href="index.html#products">Shop</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#" class="contact-trigger">Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon" id="cartIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M6 6h15l-1.5 9h-12L6 6zm0 0L5 3H2" />
+                        <circle cx="9" cy="20" r="1" />
+                        <circle cx="18" cy="20" r="1" />
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Page -->
+    <main class="product-page">
+        <div class="container">
+            <div class="product-container">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="product-main-image transparent-bg" id="mainImage">
+                        <!-- Main product image - loaded by JavaScript -->
+                    </div>
+                    <div class="product-thumbnails" id="thumbnails">
+                        <!-- Thumbnails loaded by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h1 class="product-title" id="productTitle">Matte TEST 1</h1>
+                    <p class="product-price" id="productPrice">$45.95</p>
+
+                    <p class="product-description" id="productDescription">
+                        Transform your car interior with our exquisite Royal Persian Mat.
+                        Featuring intricate traditional patterns woven with premium materials,
+                        this luxury car carpet brings timeless oriental elegance to your vehicle.
+                    </p>
+
+
+                    <!-- Size Selection -->
+                    <div class="option-group">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-sm);">
+                            <label class="option-label" for="sizeSelect" style="margin-bottom: 0;">Size</label>
+                            <button class="policy-link info-btn" data-policy="pedalInfo"
+                                style="font-size: 0.75rem; color: var(--color-gold); text-decoration: underline; background: none; border: none; cursor: pointer; padding: 0;">INFO</button>
+                        </div>
+                        <select class="size-select" id="sizeSelect">
+                            <option value="">Select a size</option>
+                            <option value="Type 1">Version 1</option>
+                            <option value="Type 2">Version 2</option>
+                        </select>
+                    </div>
+
+                    <!-- Quantity Selection -->
+                    <div class="option-group">
+                        <label class="option-label">Quantity</label>
+                        <div class="quantity-selector">
+                            <button class="quantity-btn" id="decreaseQty" aria-label="Decrease quantity">−</button>
+                            <input type="number" class="quantity-input" id="quantityInput" value="1" min="1" max="10"
+                                readonly>
+                            <button class="quantity-btn" id="increaseQty" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <button class="btn btn-primary add-to-cart-btn" id="addToCartBtn">
+                        Add to Cart
+                    </button>
+
+                    <!-- Product Features -->
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+                                <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v6"></path>
+                                <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+                                <path
+                                    d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15">
+                                </path>
+                            </svg>
+                            <span>Handmade</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                <path d="M9 9h6"></path>
+                                <path d="M12 12h3"></path>
+                            </svg>
+                            <span>24/7 support</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="M9 12l2 2 4-4"></path>
+                            </svg>
+                            <span>30 Days Quality Guarantee</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                            <span>Insured Shipping with Tracking</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                                <rect x="2" y="7" width="20" height="5"></rect>
+                                <line x1="12" y1="22" x2="12" y2="7"></line>
+                                <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                                <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                            </svg>
+                            <span>Premium Packaging with Gift</span>
+                        </div>
+                    </div>
+
+                    <!-- Q&A Section -->
+                    <div class="qna-section" id="qnaSection">
+                        <h3 class="qna-title">Questions & Answers</h3>
+                        <div id="qnaContainer">
+                            <!-- Question 1: Tracking (Moved to First) -->
+                            <div class="qna-item" data-index="0">
+                                <button class="qna-question">
+                                    <span>How can I track my order?</span>
+                                    <span class="qna-icon"></span>
+                                </button>
+                                <div class="qna-answer">
+                                    <p>Once your order ships, you'll receive a tracking number via email. You can use
+                                        this to track your package through our shipping partner's website. If you need
+                                        help tracking your order, contact our customer service team.</p>
+                                </div>
+                            </div>
+
+                            <!-- Question 2: Fit (Version Info) -->
+                            <div class="qna-item" data-index="1">
+                                <button class="qna-question">
+                                    <span>Do they fit in all cars?</span>
+                                    <span class="qna-icon"></span>
+                                </button>
+                                <div class="qna-answer">
+                                    <h3>Choose the Right Version</h3>
+                                    <p>We offer two versions tailored to your vehicle's pedal configuration:</p>
+                                    <div style='display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0;'>
+                                        <div style='text-align:center;'>
+                                            <img src='img/top_mounted.jpeg' alt='Version 1 - Top Mounted'
+                                                style='width:100%;max-width:320px;border-radius:8px;margin: 0 auto 0.5rem auto;'>
+                                            <h4>Version 1</h4>
+                                            <p style='font-size:0.9rem;color:var(--color-gray-light);'>For cars with
+                                                <strong>Top Mounted</strong> pedals.
+                                            </p>
+                                        </div>
+                                        <div style='text-align:center;'>
+                                            <img src='img/floor_mounted.jpeg' alt='Version 2 - Bottom Mounted'
+                                                style='width:100%;max-width:320px;border-radius:8px;margin: 0 auto 0.5rem auto;'>
+                                            <h4>Version 2</h4>
+                                            <p style='font-size:0.9rem;color:var(--color-gray-light);'>For cars with
+                                                <strong>Floor Mounted</strong> pedals.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p>Please check your vehicle's pedals before ordering to ensure the perfect fit.</p>
+                                </div>
+                            </div>
+
+                            <!-- Question 3: Slip -->
+                            <div class="qna-item" data-index="2">
+                                <button class="qna-question">
+                                    <span>Will the mats slip around?</span>
+                                    <span class="qna-icon"></span>
+                                </button>
+                                <div class="qna-answer">
+                                    <p>Our car mats feature a non-slip backing, ensuring they stay securely in place
+                                        while you're driving.</p>
+                                </div>
+                            </div>
+
+                            <!-- Question 4: Cleaning -->
+                            <div class="qna-item" data-index="3">
+                                <button class="qna-question">
+                                    <span>How do I clean the carmats?</span>
+                                    <span class="qna-icon"></span>
+                                </button>
+                                <div class="qna-answer">
+                                    <p>Our carmats are easy to clean. Simply vacuum regularly to remove loose dirt, and
+                                        spot clean with a mild soap and water solution for stains. The materials are
+                                        designed to hide dirt well, so they maintain their appearance even between
+                                        cleanings.</p>
+                                </div>
+                            </div>
+
+                            <!-- Question 5: AliExpress (Moved to Last) -->
+                            <div class="qna-item" data-index="4">
+                                <button class="qna-question">
+                                    <span>Are our products from AliExpress?</span>
+                                    <span class="qna-icon"></span>
+                                </button>
+                                <div class="qna-answer">
+                                    <p>You may see the same products on platforms like AliExpress, Temu, Shein or Etsy
+                                        or other brands selling the exact same stuff, but we want to say that we started
+                                        in September 2020 and back then we spent a lot of time and money into developing
+                                        this product. There were no AliExpress products or other brands selling the same
+                                        products.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <section class="product-reviews-section" id="reviews">
+            <div class="container">
+                <h2 class="section-title">Customer Reviews</h2>
+
+                <div class="reviews-grid">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                        </div>
+                        <p class="review-text">
+                            "Absolutely stunning! The carpet transformed my car interior completely. The quality is
+                            impeccable and the pattern is even more beautiful in person."
+                        </p>
+                        <p class="review-author">— Sarah M.</p>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                        </div>
+                        <p class="review-text">
+                            "I bought this as a gift and he absolutely loved it! The quality exceeded my expectations.
+                            Fast shipping and great packaging!"
+                        </p>
+                        <p class="review-author">— Michael T.</p>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                            <svg viewBox="0 0 24 24">
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                            </svg>
+                        </div>
+                        <p class="review-text">
+                            "Elegant and luxurious. This is my third purchase from ZAHRATO and they never disappoint.
+                            True quality at its finest."
+                        </p>
+                        <p class="review-author">— Emma L.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="related-products">
+            <div class="container">
+                <h2 class="section-title">Discover other Designs</h2>
+
+                <div class="products-grid" id="relatedProducts">
+                    <!-- Related products loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">ZAHRATO</a>
+                    <p>Premium oriental car carpets since 2020. Each piece is designed with passion and precision to
+                        transform your vehicle.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#products">All Products</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Help</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="contact-trigger">Contact Us</a></li>
+                        <li><a href="#qnaSection" class="policy-link">FAQs</a></li>
+                        <li><a href="#" class="policy-link" data-policy="shipping">Shipping</a></li>
+                        <li><a href="#" class="policy-link" data-policy="returns">Returns</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p style="color: var(--color-gray-light); margin-bottom: 1rem; font-size: 0.875rem;">Subscribe for
+                        exclusive offers and updates.</p>
+                    <form class="newsletter-form"
+                        onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                        <input type="email" class="newsletter-input" placeholder="Your email" required>
+                        <button type="submit" class="newsletter-btn">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer__payment-icons h-stack wrap gap-2 payment-icons">
+                    <!-- Amex -->
+                    <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pi-american_express"
+                        viewBox="0 0 38 24" width="38" height="24" class="payment-icon">
+                        <title id="pi-american_express">American Express</title>
+                        <path fill="#000"
+                            d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z"
+                            opacity=".07"></path>
+                        <path fill="#006FCF"
+                            d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z"></path>
+                        <path fill="#FFF"
+                            d="M22.012 19.936v-8.421L37 11.528v2.326l-1.732 1.852L37 17.573v2.375h-2.766l-1.47-1.622-1.46 1.628-9.292-.02Z">
+                        </path>
+                        <path fill="#006FCF"
+                            d="M23.013 19.012v-6.57h5.572v1.513h-3.768v1.028h3.678v1.488h-3.678v1.01h3.768v1.531h-5.572Z">
+                        </path>
+                        <path fill="#006FCF"
+                            d="m28.557 19.012 3.083-3.289-3.083-3.282h2.386l1.884 2.083 1.89-2.082H37v.051l-3.017 3.23L37 18.92v.093h-2.307l-1.917-2.103-1.898 2.104h-2.321Z">
+                        </path>
+                        <path fill="#FFF"
+                            d="M22.71 4.04h3.614l1.269 2.881V4.04h4.46l.77 2.159.771-2.159H37v8.421H19l3.71-8.421Z">
+                        </path>
+                        <path fill="#006FCF"
+                            d="m23.395 4.955-2.916 6.566h2l.55-1.315h2.98l.55 1.315h2.05l-2.904-6.566h-2.31Zm.25 3.777.875-2.09.873 2.09h-1.748Z">
+                        </path>
+                        <path fill="#006FCF"
+                            d="M28.581 11.52V4.953l2.811.01L32.84 9l1.456-4.046H37v6.565l-1.74.016v-4.51l-1.644 4.494h-1.59L30.35 7.01v4.51h-1.768Z">
+                        </path>
+                    </svg>
+                    <!-- Apple Pay -->
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" role="img" x="0" y="0" width="38" height="24"
+                        viewBox="0 0 165.521 105.965" xml:space="preserve" aria-labelledby="pi-apple_pay"
+                        class="payment-icon">
+                        <title id="pi-apple_pay">Apple Pay</title>
+                        <path fill="#000"
+                            d="M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z">
+                        </path>
+                        <path fill="#FFF"
+                            d="M150.698 3.532l1.672.003c.452.003.905.008 1.36.02.793.022 1.719.065 2.583.22.75.135 1.38.34 1.984.648a6.392 6.392 0 0 1 2.804 2.807c.306.6.51 1.226.645 1.983.154.854.197 1.783.218 2.58.013.45.019.9.02 1.36.005.557.005 1.113.005 1.671v76.318c0 .558 0 1.114-.004 1.682-.002.45-.008.9-.02 1.35-.022.796-.065 1.725-.221 2.589a6.855 6.855 0 0 1-.645 1.975 6.397 6.397 0 0 1-2.808 2.807c-.6.306-1.228.511-1.971.645-.881.157-1.847.2-2.574.22-.457.01-.912.017-1.379.019-.555.004-1.113.004-1.669.004H14.801c-.55 0-1.1 0-1.66-.004a74.993 74.993 0 0 1-1.35-.018c-.744-.02-1.71-.064-2.584-.22a6.938 6.938 0 0 1-1.986-.65 6.337 6.337 0 0 1-1.622-1.18 6.355 6.355 0 0 1-1.178-1.623 6.935 6.935 0 0 1-.646-1.985c-.156-.863-.2-1.788-.22-2.578a66.088 66.088 0 0 1-.02-1.355l-.003-1.327V14.474l.002-1.325a66.7 66.7 0 0 1 .02-1.357c.022-.792.065-1.717.222-2.587a6.924 6.924 0 0 1 .646-1.981c.304-.598.7-1.144 1.18-1.623a6.386 6.386 0 0 1 1.624-1.18 6.96 6.96 0 0 1 1.98-.646c.865-.155 1.792-.198 2.586-.22.452-.012.905-.017 1.354-.02l1.677-.003h135.875">
+                        </path>
+                        <g>
+                            <g>
+                                <path fill="#000"
+                                    d="M43.508 35.77c1.404-1.755 2.356-4.112 2.105-6.52-2.054.102-4.56 1.355-6.012 3.112-1.303 1.504-2.456 3.959-2.156 6.266 2.306.2 4.61-1.152 6.063-2.858">
+                                </path>
+                                <path fill="#000"
+                                    d="M45.587 39.079c-3.35-.2-6.196 1.9-7.795 1.9-1.6 0-4.049-1.8-6.698-1.751-3.447.05-6.645 2-8.395 5.1-3.598 6.2-.95 15.4 2.55 20.45 1.699 2.5 3.747 5.25 6.445 5.151 2.55-.1 3.549-1.65 6.647-1.65 3.097 0 3.997 1.65 6.696 1.6 2.798-.05 4.548-2.5 6.247-5 1.95-2.85 2.747-5.6 2.797-5.75-.05-.05-5.396-2.101-5.446-8.251-.05-5.15 4.198-7.6 4.398-7.751-2.399-3.548-6.147-3.948-7.447-4.048">
+                                </path>
+                            </g>
+                            <g>
+                                <path fill="#000"
+                                    d="M78.973 32.11c7.278 0 12.347 5.017 12.347 12.321 0 7.33-5.173 12.373-12.529 12.373h-8.058V69.62h-5.822V32.11h14.062zm-8.24 19.807h6.68c5.07 0 7.954-2.729 7.954-7.46 0-4.73-2.885-7.434-7.928-7.434h-6.706v14.894z">
+                                </path>
+                                <path fill="#000"
+                                    d="M92.764 61.847c0-4.809 3.665-7.564 10.423-7.98l7.252-.442v-2.08c0-3.04-2.001-4.704-5.562-4.704-2.938 0-5.07 1.507-5.51 3.82h-5.252c.157-4.86 4.731-8.395 10.918-8.395 6.654 0 10.995 3.483 10.995 8.89v18.663h-5.38v-4.497h-.13c-1.534 2.937-4.914 4.782-8.579 4.782-5.406 0-9.175-3.222-9.175-8.057zm17.675-2.417v-2.106l-6.472.416c-3.64.234-5.536 1.585-5.536 3.95 0 2.288 1.975 3.77 5.068 3.77 3.95 0 6.94-2.522 6.94-6.03z">
+                                </path>
+                                <path fill="#000"
+                                    d="M120.975 79.652v-4.496c.364.051 1.247.103 1.715.103 2.573 0 4.029-1.09 4.913-3.899l.52-1.663-9.852-27.293h6.082l6.863 22.146h.13l6.862-22.146h5.927l-10.216 28.67c-2.34 6.577-5.017 8.735-10.683 8.735-.442 0-1.872-.052-2.261-.157z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <!-- Google Pay -->
+                    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24"
+                        aria-labelledby="pi-google_pay" class="payment-icon">
+                        <title id="pi-google_pay">Google Pay</title>
+                        <path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                            fill="#000" opacity=".07"></path>
+                        <path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+                            fill="#FFF"></path>
+                        <path
+                            d="M18.093 11.976v3.2h-1.018v-7.9h2.691a2.447 2.447 0 0 1 1.747.692 2.28 2.28 0 0 1 .11 3.224l-.11.116c-.47.447-1.098.69-1.747.674l-1.673-.006zm0-3.732v2.788h1.698c.377.012.741-.135 1.005-.404a1.391 1.391 0 0 0-1.005-2.354l-1.698-.03zm6.484 1.348c.65-.03 1.286.188 1.778.613.445.43.682 1.03.65 1.649v3.334h-.969v-.766h-.049a1.93 1.93 0 0 1-1.673.931 2.17 2.17 0 0 1-1.496-.533 1.667 1.667 0 0 1-.613-1.324 1.606 1.606 0 0 1 .613-1.336 2.746 2.746 0 0 1 1.698-.515c.517-.02 1.03.093 1.49.331v-.208a1.134 1.134 0 0 0-.417-.901 1.416 1.416 0 0 0-.98-.368 1.545 1.545 0 0 0-1.319.717l-.895-.564a2.488 2.488 0 0 1 2.182-1.06zM23.29 13.52a.79.79 0 0 0 .337.662c.223.176.5.269.785.263.429-.001.84-.17 1.146-.472.305-.286.478-.685.478-1.103a2.047 2.047 0 0 0-1.324-.374 1.716 1.716 0 0 0-1.03.294.883.883 0 0 0-.392.73zm9.286-3.75l-3.39 7.79h-1.048l1.281-2.728-2.224-5.062h1.103l1.612 3.885 1.569-3.885h1.097z"
+                            fill="#5F6368"></path>
+                        <path
+                            d="M13.986 11.284c0-.308-.024-.616-.073-.92h-4.29v1.747h2.451a2.096 2.096 0 0 1-.9 1.373v1.134h1.464a4.433 4.433 0 0 0 1.348-3.334z"
+                            fill="#4285F4"></path>
+                        <path
+                            d="M9.629 15.721a4.352 4.352 0 0 0 3.01-1.097l-1.466-1.14a2.752 2.752 0 0 1-4.094-1.44H5.577v1.17a4.53 4.53 0 0 0 4.052 2.507z"
+                            fill="#34A853"></path>
+                        <path
+                            d="M7.079 12.05a2.709 2.709 0 0 1 0-1.735v-1.17H5.577a4.505 4.505 0 0 0 0 4.075l1.502-1.17z"
+                            fill="#FBBC04"></path>
+                        <path
+                            d="M9.629 8.44a2.452 2.452 0 0 1 1.74.68l1.3-1.293a4.37 4.37 0 0 0-3.065-1.183 4.53 4.53 0 0 0-4.027 2.5l1.502 1.171a2.715 2.715 0 0 1 2.55-1.875z"
+                            fill="#EA4335"></path>
+                    </svg>
+                    <!-- Maestro -->
+                    <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img"
+                        aria-labelledby="pi-maestro" class="payment-icon">
+                        <title id="pi-maestro">Maestro</title>
+                        <path opacity=".07"
+                            d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+                        <path fill="#fff"
+                            d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+                        <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
+                        <circle fill="#00A2E5" cx="23" cy="12" r="7"></circle>
+                        <path fill="#7375CF"
+                            d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z">
+                        </path>
+                    </svg>
+                    <!-- Mastercard -->
+                    <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
+                        aria-labelledby="pi-master" class="payment-icon">
+                        <title id="pi-master">Mastercard</title>
+                        <path opacity=".07"
+                            d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+                        <path fill="#fff"
+                            d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+                        <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
+                        <circle fill="#F79E1B" cx="23" cy="12" r="7"></circle>
+                        <path fill="#FF5F00"
+                            d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z">
+                        </path>
+                    </svg>
+                    <!-- PayPal -->
+                    <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img"
+                        aria-labelledby="pi-paypal" class="payment-icon">
+                        <title id="pi-paypal">PayPal</title>
+                        <path opacity=".07"
+                            d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+                        <path fill="#fff"
+                            d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+                        <path fill="#003087"
+                            d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z">
+                        </path>
+                        <path fill="#3086C8"
+                            d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z">
+                        </path>
+                        <path fill="#012169"
+                            d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z">
+                        </path>
+                    </svg>
+                    <!-- Visa -->
+                    <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
+                        aria-labelledby="pi-visa" class="payment-icon">
+                        <title id="pi-visa">Visa</title>
+                        <path opacity=".07"
+                            d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+                        <path fill="#fff"
+                            d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+                        <path
+                            d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+                            fill="#142688"></path>
+                    </svg>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Pinterest">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0z" />
+                            <path
+                                d="M12 2a10 10 0 0 0-4 19.2c0-.6.1-1.5.2-2.2l1.1-4.6s-.3-.6-.3-1.4c0-1.3.8-2.3 1.7-2.3.8 0 1.2.6 1.2 1.3 0 .8-.5 2-1 3.1-.2.7.5 1.3 1.2 1.3 1.4 0 2.4-1.5 2.4-3.7 0-1.9-1.4-3.3-3.4-3.3-2.3 0-3.7 1.7-3.7 3.5 0 .7.3 1.5.6 1.9 0 .1.1.1.1.2 0 .2-.2.7-.2.8-.1.2-.2.2-.3.1-1-.5-1.6-1.9-1.6-3.1 0-2.5 1.8-4.8 5.3-4.8 2.8 0 4.9 2 4.9 4.6 0 2.8-1.8 5-4.2 5-.8 0-1.6-.4-1.9-.9l-.5 2c-.2.7-.7 1.6-1 2.1.8.2 1.6.4 2.4.4a10 10 0 1 0 0-20z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">&copy; 2026 ZAHRATO. All rights reserved. Shop made by <a
+                        href="https://benedictjaros.com" class="creator-link">benedictjaros.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Policy Modal -->
+    <div class="modal-overlay" id="policyModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <button class="modal-close" id="modalClose">✕</button>
+                <h2 class="modal-title" id="modalTitle">Policy</h2>
+            </div>
+            <div class="modal-content" id="modalContent">
+                <!-- Policy content loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <button class="modal-close" id="contactModalClose">✕</button>
+                <h2 class="modal-title">Contact Us</h2>
+            </div>
+            <div class="modal-content">
+                <form class="contact-form"
+                    onsubmit="event.preventDefault(); alert('Message sent! We will get back to you soon.'); document.getElementById('contactModal').classList.remove('active');">
+                    <div class="form-group">
+                        <label for="contactName" class="form-label">Full Name</label>
+                        <input type="text" id="contactName" class="newsletter-input" style="width: 100%;"
+                            placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail" class="form-label">Email</label>
+                        <input type="email" id="contactEmail" class="newsletter-input" style="width: 100%;"
+                            placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage" class="form-label">Message</label>
+                        <textarea id="contactMessage" class="newsletter-input" style="width: 100%;"
+                            placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="newsletter-btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/shopify.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+        // Global product data
+        let allProducts = [];
+        let currentProduct = null;
+
+        // Initialize product page
+        document.addEventListener('DOMContentLoaded', function () {
+            loadProductData();
+            initProductPage();
+            initPolicyModal();
+            initContactModal();
+            initQnA();
+        });
+
+        // Load product data from global PRODUCTS_DATA
+        function loadProductData() {
+            // Use products from products.js
+            if (window.PRODUCTS_DATA) {
+                allProducts = window.PRODUCTS_DATA.products;
+            } else {
+                console.error("PRODUCTS_DATA not found");
+                allProducts = [];
+            }
+
+            // Get product ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = parseInt(urlParams.get('id')) || 1;
+
+            currentProduct = allProducts.find(p => p.id === productId) || allProducts[0];
+
+            // Update page with product data
+            updateProductPage(currentProduct);
+            renderRelatedProducts(productId);
+        }
+
+        function updateProductPage(product) {
+            document.getElementById('productTitle').textContent = product.name;
+            document.getElementById('productPrice').textContent = '$' + product.price.toFixed(2);
+            document.getElementById('productDescription').textContent = product.description;
+            document.title = product.name + ' - ZAHRATO';
+
+            // Update product images
+            const mainImage = document.getElementById('mainImage');
+            const thumbnails = document.getElementById('thumbnails');
+
+            if (product.images && product.images.length > 0) {
+                // Set main image with all images for scrolling
+                mainImage.innerHTML = product.images.map((img, index) => `
+                    <div class="product-image-slide" id="slide-${index}" style="min-width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; scroll-snap-align: center;">
+                        <img src="${img}" alt="${product.name} view ${index + 1}"
+                            style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;">
+                    </div>
+                `).join('');
+
+                // Set thumbnails with square aspect ratio
+                thumbnails.innerHTML = product.images.map((img, index) => `
+                        <div class="thumbnail ${index === 0 ? 'active' : ''}" data-index="${index}">
+                            <img src="${img}" alt="${product.name}"
+                                style="width: 100%; aspect-ratio: 1/1; object-fit: cover;">
+                        </div>
+                        `).join('');
+
+                // Re-initialize gallery actions since we replaced DOM
+                setTimeout(initThumbnailGallery, 0);
+            }
+
+            // Update size options if product has specific sizes
+            if (product.sizes) {
+                const sizeSelect = document.getElementById('sizeSelect');
+                sizeSelect.innerHTML = '<option value="">Select a size</option>' +
+                    product.sizes.map(size => `<option value="${size}">${size}</option>`).join('');
+            }
+
+            // Store for cart
+            window.currentProduct = product;
+        }
+
+        function initQnA() {
+            const container = document.getElementById('qnaContainer');
+            // Add click handlers
+            container.querySelectorAll('.qna-question').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const item = this.closest('.qna-item');
+                    const wasActive = item.classList.contains('active');
+
+                    // Close all
+                    container.querySelectorAll('.qna-item').forEach(i => i.classList.remove('active'));
+
+                    // Toggle clicked
+                    if (!wasActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        function renderRelatedProducts(currentId) {
+            const container = document.getElementById('relatedProducts');
+            const related = allProducts.filter(p => p.id !== currentId).slice(0, 3);
+
+            container.innerHTML = related.map(product => {
+                const image = product.images && product.images.length > 0 ? product.images[0] : 'img/product-1.png';
+
+                return `
+                <div class="product-card" data-product-id="${product.id}" onclick="window.location.href='product.html?id=${product.id}'">
+                    <div class="product-card-image transparent-bg">
+                        <img src="${image}" alt="${product.name}" style="width: 100%; aspect-ratio: 1/1; object-fit: contain;">
+                        <div class="product-card-overlay">
+                            <div class="product-info-left">
+                                <h3 class="product-card-title">${product.name}</h3>
+                                <span class="product-card-subtitle">UNIVERSAL CARMATS</span>
+                            </div>
+                            <div class="product-info-right">
+                                <span class="product-card-price">$${product.price.toFixed(2)}</span>
+                                <span class="product-stock-label">LIMITED STOCK</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        function initProductPage() {
+            initSizeSelector();
+            initQuantityControls();
+            initSizeSelector();
+            initQuantityControls();
+            // initThumbnailGallery called after rendering
+            initAddToCart();
+            initAddToCart();
+            // No color selection needed
+            window.selectedColor = null;
+        }
+
+        function initSizeSelector() {
+            const sizeSelect = document.getElementById('sizeSelect');
+            if (sizeSelect) {
+                sizeSelect.addEventListener('change', function () {
+                    window.selectedSize = this.value;
+                });
+            }
+            window.selectedSize = '';
+        }
+
+        function initQuantityControls() {
+            const quantityInput = document.getElementById('quantityInput');
+            const decreaseBtn = document.getElementById('decreaseQty');
+            const increaseBtn = document.getElementById('increaseQty');
+
+            if (!quantityInput || !decreaseBtn || !increaseBtn) return;
+
+            decreaseBtn.addEventListener('click', function () {
+                let value = parseInt(quantityInput.value);
+                if (value > 1) {
+                    quantityInput.value = value - 1;
+                    this.style.transform = 'scale(0.9)';
+                    setTimeout(() => this.style.transform = '', 100);
+                }
+            });
+
+            increaseBtn.addEventListener('click', function () {
+                let value = parseInt(quantityInput.value);
+                if (value < 10) {
+                    quantityInput.value = value + 1; this.style.transform = 'scale(0.9)';
+                    setTimeout(() => this.style.transform = '', 100);
+                }
+            });
+        }
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('mobileMenuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        menuToggle.addEventListener('click', function () {
+            this.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+        function initThumbnailGallery() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.getElementById('mainImage');
+
+            if (!mainImage || thumbnails.length === 0) return;
+
+            // Thumbnail Click -> Scroll to Image
+            thumbnails.forEach((thumb) => {
+                thumb.addEventListener('click', function () {
+                    const index = parseInt(this.dataset.index);
+                    const targetSlide = document.getElementById(`slide-${index}`);
+
+                    if (targetSlide) {
+                        mainImage.scrollTo({
+                            left: targetSlide.offsetLeft,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Scroll -> Update Active Thumbnail
+            mainImage.addEventListener('scroll', () => {
+                const scrollLeft = mainImage.scrollLeft;
+                const width = mainImage.clientWidth;
+                const index = Math.round(scrollLeft / width);
+
+                thumbnails.forEach(t => t.classList.remove('active'));
+                if (thumbnails[index]) {
+                    thumbnails[index].classList.add('active');
+                }
+            });
+        }
+
+        function initAddToCart() {
+            const addToCartBtn = document.getElementById('addToCartBtn');
+
+            if (!addToCartBtn) return;
+
+            addToCartBtn.addEventListener('click', function () {
+                if (!window.selectedSize) {
+                    const sizeSelect = document.getElementById('sizeSelect');
+                    if (sizeSelect) {
+                        sizeSelect.style.borderColor = '#ff4444';
+                        sizeSelect.focus();
+                        setTimeout(() => {
+                            sizeSelect.style.borderColor = '';
+                        }, 2000);
+                    }
+                    alert('Please select a size');
+                    return;
+                }
+
+                const product = window.currentProduct;
+                const quantityInput = document.getElementById('quantityInput');
+                const quantity = quantityInput ? parseInt(quantityInput.value) : 1;
+
+                Cart.addItem({
+                    productId: product.id,
+                    name: product.name,
+                    price: product.price,
+                    color: 'N/A',
+                    size: window.selectedSize,
+                    quantity: quantity,
+                    image: product.images ? product.images[0] : `img/product-${product.id}.png`
+                });
+
+                const originalText = addToCartBtn.textContent;
+                addToCartBtn.textContent = 'Added!';
+                addToCartBtn.style.backgroundColor = '#4CAF50';
+
+                setTimeout(() => {
+                    addToCartBtn.textContent = originalText;
+                    addToCartBtn.style.backgroundColor = '';
+                }, 1500);
+            });
+        }
+
+        // Policy Modal
+        function initPolicyModal() {
+            const modal = document.getElementById('policyModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            const modalClose = document.getElementById('modalClose');
+
+            document.addEventListener('click', function (e) {
+                if (e.target.classList.contains('policy-link')) {
+                    e.preventDefault();
+                    const policyKey = e.target.dataset.policy;
+                    openPolicyModal(policyKey);
+                }
+            });
+
+            function openPolicyModal(policyKey) {
+                const policy = window.policies[policyKey];
+                if (policy) {
+                    modalTitle.textContent = policy.title;
+                    modalContent.innerHTML = policy.content;
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            modalClose.addEventListener('click', closeModal);
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+        }
+        // Contact Modal
+        function initContactModal() {
+            const contactModal = document.getElementById('contactModal');
+            const contactModalClose = document.getElementById('contactModalClose');
+            const contactTriggers = document.querySelectorAll('.contact-trigger');
+
+            contactTriggers.forEach(trigger => {
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    contactModal.classList.add('active');
+                });
+            });
+
+            if (contactModalClose) {
+                contactModalClose.addEventListener('click', () => {
+                    contactModal.classList.remove('active');
+                });
+            }
+
+            // Close when click outside
+            window.addEventListener('click', (e) => {
+                if (e.target === contactModal) {
+                    contactModal.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
