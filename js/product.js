@@ -224,7 +224,12 @@ function initAddToCart(productId) {
                     sizeSelect.style.borderColor = '';
                 }, 2000);
             }
-            alert('Please select a size');
+            // Show custom size required modal instead of alert
+            if (typeof showSizeRequiredModal === 'function') {
+                showSizeRequiredModal();
+            } else {
+                alert('Please select a size');
+            }
             return;
         }
 

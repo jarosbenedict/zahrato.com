@@ -2005,3 +2005,222 @@ textarea.newsletter-input {
     padding: var(--spacing-3xl) 0;
     background-color: var(--color-gray-dark);
 }
+
+/* Comparison Section */
+.comparison-section {
+    padding: var(--spacing-3xl) 0;
+    margin-bottom: var(--spacing-3xl);
+    background-color: var(--color-black);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    /* Added middle column for divider */
+    gap: 0;
+    margin-top: var(--spacing-2xl);
+    max-width: 1000px;
+    /* Wider for editorial look */
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch;
+}
+
+/* The vertical divider line */
+.comparison-divider {
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
+    width: 1px;
+    height: 100%;
+}
+
+.comparison-card {
+    /* Completely removed borders and background */
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0 var(--spacing-2xl);
+    /* Horizontal spacing only */
+    transition: opacity var(--transition-normal);
+    position: relative;
+    overflow: visible;
+    height: auto;
+    box-shadow: none !important;
+    /* Force remove any shadows */
+}
+
+/* Ordinary card */
+.comparison-card.ordinary {
+    opacity: 0.5;
+    /* More faded for contrast */
+    text-align: right;
+    /* Mirror layout */
+}
+
+.comparison-card.ordinary .comparison-list li {
+    flex-direction: row-reverse;
+    /* Mirror list items */
+    text-align: right;
+}
+
+.comparison-card.ordinary:hover {
+    opacity: 0.7;
+}
+
+/* Zahrato card */
+.comparison-card.zahrato {
+    opacity: 1;
+}
+
+.comparison-card.zahrato:hover {
+    transform: none;
+    /* Remove movement */
+}
+
+.comparison-header {
+    text-align: inherit;
+    /* Follow parent alignment */
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-white);
+    letter-spacing: 0.02em;
+    font-weight: 400;
+}
+
+.comparison-header.text-gold {
+    color: var(--color-gold);
+}
+
+.comparison-image {
+    width: 100%;
+    max-width: 320px;
+    /* Constrain image width */
+    margin: 0 0 var(--spacing-xl) auto;
+    /* Right align for ordinary */
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Subtle image border only */
+    display: block;
+}
+
+/* Override for Zahrato side image alignment */
+.comparison-card.zahrato .comparison-image {
+    margin: 0 auto var(--spacing-xl) 0;
+    /* Left align for Zahrato */
+    border-color: rgba(197, 164, 126, 0.3);
+}
+
+.comparison-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.comparison-card:hover .comparison-image img {
+    transform: scale(1.03);
+}
+
+.comparison-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    /* Allow text-align to work */
+    text-align: inherit;
+}
+
+.comparison-list li {
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-md);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    color: var(--color-gray-light);
+    line-height: 1.4;
+}
+
+.comparison-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Icons */
+.icon-x,
+.icon-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: 1rem;
+    /* Consistent size */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        /* Stack vertically */
+        gap: var(--spacing-2xl);
+    }
+
+    .comparison-divider {
+        display: none;
+        /* Hide vertical line */
+    }
+
+    .comparison-card,
+    .comparison-card.ordinary,
+    .comparison-card.ordinary .comparison-list li {
+        text-align: center;
+        /* Center everything on mobile */
+        padding: 0 var(--spacing-md);
+        flex-direction: row;
+        /* Reset mirroring */
+    }
+
+    .comparison-image,
+    .comparison-card.zahrato .comparison-image {
+        margin: 0 auto var(--spacing-lg) auto;
+        /* Center images */
+    }
+
+    .comparison-list li {
+        justify-content: center;
+    }
+}
+
+.icon-x {
+    color: #555;
+    /* Darker gray for X to be subtle */
+    font-weight: bold;
+    font-size: 1.25rem;
+    min-width: 24px;
+}
+
+.icon-check {
+    color: var(--color-gold);
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1;
+    min-width: 24px;
+    text-shadow: 0 0 10px rgba(197, 164, 126, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .comparison-card {
+        padding: var(--spacing-lg);
+    }
+}

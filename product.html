@@ -247,10 +247,75 @@
             </div>
         </div>
 
+
+        <!-- Comparison Section -->
+        <section class="comparison-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" style="margin-top: var(--spacing-xl);">Why Choose Zahrato?
+                </h2>
+                <div class="comparison-grid">
+                    <!-- Ordinary Side -->
+                    <div class="comparison-card ordinary animate-on-scroll delay-100">
+                        <h3 class="comparison-header">Ordinary Car Mats</h3>
+                        <div class="comparison-image">
+                            <img src="img/bad_com.png" alt="Ordinary Mats">
+                        </div>
+                        <ul class="comparison-list">
+                            <li>
+                                <span class="icon-x">✕</span>
+                                Thin materials, wear out fast
+                            </li>
+                            <li>
+                                <span class="icon-x">✕</span>
+                                Generic mass-produced design
+                            </li>
+                            <li>
+                                <span class="icon-x">✕</span>
+                                Poor fit, limited coverage
+                            </li>
+                            <li>
+                                <span class="icon-x">✕</span>
+                                Basic dirt protection
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="comparison-divider"></div>
+
+                    <!-- Zahrato Side -->
+                    <div class="comparison-card zahrato animate-on-scroll delay-200">
+                        <h3 class="comparison-header text-gold">Zahrato Mats</h3>
+                        <div class="comparison-image">
+                            <img src="img/zafran_type1_2.png" alt="Zahrato Mats">
+                        </div>
+                        <ul class="comparison-list">
+                            <li>
+                                <span class="icon-check">✓</span>
+                                High-density, long-lasting materials
+                            </li>
+                            <li>
+                                <span class="icon-check">✓</span>
+                                Handcrafted oriental design
+                            </li>
+                            <li>
+                                <span class="icon-check">✓</span>
+                                Perfect fit, full coverage
+                            </li>
+                            <li>
+                                <span class="icon-check">✓</span>
+                                Superior dirt & spill protection
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Reviews Section -->
         <section class="product-reviews-section" id="reviews">
             <div class="container">
-                <h2 class="section-title">Customer Reviews</h2>
+                <h2 class="section-title">Customer Store Reviews</h2>
 
                 <div class="reviews-grid">
                     <!-- Review 1 -->
@@ -385,7 +450,7 @@
                         <li><a href="#qnaSection" class="policy-link">FAQs</a></li>
                         <li><a href="#" class="policy-link" data-policy="shipping">Shipping</a></li>
                         <li><a href="#" class="policy-link" data-policy="returns">Returns</a></li>
-
+                        <li><a href="#" class="policy-link" data-policy="legal">Legal Information</a></li>
                     </ul>
                 </div>
 
@@ -393,8 +458,7 @@
                     <h4 class="footer-title">Newsletter</h4>
                     <p style="color: var(--color-gray-light); margin-bottom: 1rem; font-size: 0.875rem;">Subscribe for
                         exclusive offers and updates.</p>
-                    <form class="newsletter-form"
-                        onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                    <form class="newsletter-form">
                         <input type="email" class="newsletter-input" placeholder="Your email" required>
                         <button type="submit" class="newsletter-btn">Join</button>
                     </form>
@@ -597,8 +661,7 @@
                 <h2 class="modal-title">Contact Us</h2>
             </div>
             <div class="modal-content">
-                <form class="contact-form"
-                    onsubmit="event.preventDefault(); alert('Message sent! We will get back to you soon.'); document.getElementById('contactModal').classList.remove('active');">
+                <form class="contact-form">
                     <div class="form-group">
                         <label for="contactName" class="form-label">Full Name</label>
                         <input type="text" id="contactName" class="newsletter-input" style="width: 100%;"
@@ -625,6 +688,9 @@
     <script src="js/cart.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/products.js"></script>
+    <script src="js/newsletter.js"></script>
+    <script src="js/size-modal.js"></script>
+    <script src="js/product.js"></script>
     <script>
         // Global product data
         let allProducts = [];
@@ -860,7 +926,12 @@
                             sizeSelect.style.borderColor = '';
                         }, 2000);
                     }
-                    alert('Please select a size');
+                    // Show custom size required modal
+                    if (typeof showSizeRequiredModal === 'function') {
+                        showSizeRequiredModal();
+                    } else {
+                        alert('Please select a size');
+                    }
                     return;
                 }
 

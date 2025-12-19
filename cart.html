@@ -115,6 +115,7 @@
                         <li><a href="index.html#qnaSection" class="policy-link">FAQs</a></li>
                         <li><a href="#" class="policy-link" data-policy="shipping">Shipping</a></li>
                         <li><a href="#" class="policy-link" data-policy="returns">Returns</a></li>
+                        <li><a href="#" class="policy-link" data-policy="legal">Legal Information</a></li>
                     </ul>
                 </div>
 
@@ -122,8 +123,7 @@
                     <h4 class="footer-title">Newsletter</h4>
                     <p style="color: var(--color-gray-light); margin-bottom: 1rem; font-size: 0.875rem;">Subscribe for
                         exclusive offers and updates.</p>
-                    <form class="newsletter-form"
-                        onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                    <form class="newsletter-form">
                         <input type="email" class="newsletter-input" placeholder="Your email" required>
                         <button type="submit" class="newsletter-btn">Join</button>
                     </form>
@@ -326,8 +326,7 @@
                 <h2 class="modal-title">Contact Us</h2>
             </div>
             <div class="modal-content">
-                <form class="contact-form"
-                    onsubmit="event.preventDefault(); alert('Message sent! We will get back to you soon.'); document.getElementById('contactModal').classList.remove('active');">
+                <form class="contact-form">
                     <div class="form-group">
                         <label for="contactName" class="form-label">Full Name</label>
                         <input type="text" id="contactName" class="newsletter-input" style="width: 100%;"
@@ -353,6 +352,7 @@
     <script src="js/shopify.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/products.js"></script>
+    <script src="js/newsletter.js"></script>
     <script>
         // Mobile menu toggle
         const menuToggle = document.getElementById('mobileMenuToggle');
