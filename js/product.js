@@ -22,10 +22,12 @@ function initProductPage() {
 
     // Initial load
     loadProductData(productId);
+    loadRelatedProducts(productId);
 
     // Re-render on language change
     window.addEventListener('languageChanged', () => {
         loadProductData(productId);
+        loadRelatedProducts(productId);
     });
 
     // Initialize UI interactions
@@ -243,6 +245,47 @@ function initThumbnailGallery() {
         const images = mainImageContainer.querySelectorAll('img');
         images.forEach(img => observer.observe(img));
     }
+}
+
+/**
+ * Load related products
+ * @param {number} currentId - Current product ID to exclude
+ */
+function loadRelatedProducts(currentId) {
+    const container = document.getElementById('relatedProducts');
+    if (!container || !window.PRODUCTS_DATA) return;
+
+    // Filter out current product and get up to 3 random/first products
+    const related = window.PRODUCTS_DATA.products
+        .filter(p => p.id !== currentId)
+        .slice(0, 3);
+
+    if (related.length === 0) {
+        container.closest('.related-products').style.display = 'none';
+        return;
+    }
+
+    container.innerHTML = related.map(product => {
+        const image = product.images && product.images.length > 0 ? product.images[0] : `img/product-${product.id}.jpg`;
+
+        return `
+        <div class="product-card" onclick="window.location.href='product.html?id=${product.id}'">
+            <div class="product-card-image transparent-bg">
+                <img src="${image}" alt="${LanguageManager.getLocalized(product.name)}" style="width: 100%; aspect-ratio: 1/1; object-fit: contain;">
+                <div class="product-card-overlay">
+                    <div class="product-info-left">
+                        <h3 class="product-card-title">${LanguageManager.getLocalized(product.name)}</h3>
+                        <span class="product-card-subtitle">${window.t('products.universal')}</span>
+                    </div>
+                    <div class="product-info-right">
+                        <span class="product-card-price">€${product.price}</span>
+                        <span class="product-stock-label">${window.t('products.limitedStock')}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+    }).join('');
 }
 
 /**
