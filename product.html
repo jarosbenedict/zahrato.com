@@ -7,6 +7,8 @@
     <meta name="description" content="ZAHRATO - Shop our premium oriental car carpets">
     <title>Product - ZAHRATO</title>
     <link rel="stylesheet" href="css/styles.css?v=2">
+    <script src="js/translations.js"></script>
+    <script src="js/language-manager.js"></script>
 </head>
 
 <body>
@@ -23,10 +25,10 @@
             <a href="index.html" class="logo">ZAHRATO</a>
 
             <nav class="nav-main" id="mainNav">
-                <a href="index.html">Home</a>
-                <a href="index.html#products">Shop</a>
-                <a href="#reviews">Reviews</a>
-                <a href="#" class="contact-trigger">Contact Us</a>
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="index.html#products" data-i18n="nav.shop">Shop</a>
+                <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+                <a href="#" class="contact-trigger" data-i18n="nav.contact">Contact Us</a>
             </nav>
 
             <div class="header-actions">
@@ -72,20 +74,21 @@
                     <div class="option-group">
                         <div
                             style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-sm);">
-                            <label class="option-label" for="sizeSelect" style="margin-bottom: 0;">Size</label>
+                            <label class="option-label" for="sizeSelect" style="margin-bottom: 0;"
+                                data-i18n="products.selectSize">Size</label>
                             <button class="policy-link info-btn" data-policy="pedalInfo"
                                 style="font-size: 0.75rem; color: var(--color-gold); text-decoration: underline; background: none; border: none; cursor: pointer; padding: 0;">INFO</button>
                         </div>
                         <select class="size-select" id="sizeSelect">
-                            <option value="">Select a size</option>
-                            <option value="Type 1">Version 1</option>
-                            <option value="Type 2">Version 2</option>
+                            <option value="" data-i18n="products.selectSize">Select a size</option>
+                            <option value="Type 1" data-i18n="qna.items.1.details.v1Title">Version 1</option>
+                            <option value="Type 2" data-i18n="qna.items.1.details.v2Title">Version 2</option>
                         </select>
                     </div>
 
                     <!-- Quantity Selection -->
                     <div class="option-group">
-                        <label class="option-label">Quantity</label>
+                        <label class="option-label" data-i18n="products.quantity">Quantity</label>
                         <div class="quantity-selector">
                             <button class="quantity-btn" id="decreaseQty" aria-label="Decrease quantity">−</button>
                             <input type="number" class="quantity-input" id="quantityInput" value="1" min="1" max="10"
@@ -95,7 +98,7 @@
                     </div>
 
                     <!-- Add to Cart Button -->
-                    <button class="btn btn-primary add-to-cart-btn" id="addToCartBtn">
+                    <button class="btn btn-primary add-to-cart-btn" id="addToCartBtn" data-i18n="products.addToCart">
                         Add to Cart
                     </button>
 
@@ -111,7 +114,7 @@
                                     d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15">
                                 </path>
                             </svg>
-                            <span>Handmade</span>
+                            <span data-i18n="features.handmade">Handmade</span>
                         </div>
                         <div class="feature-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -120,7 +123,7 @@
                                 <path d="M9 9h6"></path>
                                 <path d="M12 12h3"></path>
                             </svg>
-                            <span>24/7 support</span>
+                            <span data-i18n="features.support">24/7 support</span>
                         </div>
                         <div class="feature-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -128,7 +131,7 @@
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                                 <path d="M9 12l2 2 4-4"></path>
                             </svg>
-                            <span>30 Days Quality Guarantee</span>
+                            <span data-i18n="features.guarantee">30 Days Quality Guarantee</span>
                         </div>
                         <div class="feature-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -138,7 +141,7 @@
                                 <circle cx="5.5" cy="18.5" r="2.5"></circle>
                                 <circle cx="18.5" cy="18.5" r="2.5"></circle>
                             </svg>
-                            <span>Insured Shipping with Tracking</span>
+                            <span data-i18n="features.shipping">Insured Shipping with Tracking</span>
                         </div>
                         <div class="feature-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -149,21 +152,21 @@
                                 <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
                                 <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
                             </svg>
-                            <span>Premium Packaging with Gift</span>
+                            <span data-i18n="features.packaging">Premium Packaging with Gift</span>
                         </div>
                     </div>
 
                     <!-- Q&A Section -->
                     <div class="qna-section" id="qnaSection">
-                        <h3 class="qna-title">Questions & Answers</h3>
+                        <h3 class="qna-title" data-i18n="qna.title">Questions & Answers</h3>
                         <div id="qnaContainer">
                             <!-- Question 1: Tracking (Moved to First) -->
                             <div class="qna-item" data-index="0">
                                 <button class="qna-question">
-                                    <span>How can I track my order?</span>
+                                    <span data-i18n="qna.items.0.question">How can I track my order?</span>
                                     <span class="qna-icon"></span>
                                 </button>
-                                <div class="qna-answer">
+                                <div class="qna-answer" data-i18n="qna.items.0.answer">
                                     <p>Once your order ships, you'll receive a tracking number via email. You can use
                                         this to track your package through our shipping partner's website. If you need
                                         help tracking your order, contact our customer service team.</p>
@@ -173,41 +176,45 @@
                             <!-- Question 2: Fit (Version Info) -->
                             <div class="qna-item" data-index="1">
                                 <button class="qna-question">
-                                    <span>Do they fit in all cars?</span>
+                                    <span data-i18n="qna.items.1.question">Do they fit in all cars?</span>
                                     <span class="qna-icon"></span>
                                 </button>
                                 <div class="qna-answer">
-                                    <h3>Choose the Right Version</h3>
-                                    <p>We offer two versions tailored to your vehicle's pedal configuration:</p>
+                                    <h3 data-i18n="qna.items.1.details.title">Choose the Right Version</h3>
+                                    <p data-i18n="qna.items.1.details.intro">We offer two versions tailored to your
+                                        vehicle's pedal configuration:</p>
                                     <div style='display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0;'>
                                         <div style='text-align:center;'>
                                             <img src='img/top_mounted.jpeg' alt='Version 1 - Top Mounted'
                                                 style='width:100%;max-width:320px;border-radius:8px;margin: 0 auto 0.5rem auto;'>
-                                            <h4>Version 1</h4>
-                                            <p style='font-size:0.9rem;color:var(--color-gray-light);'>For cars with
+                                            <h4 data-i18n="qna.items.1.details.v1Title">Version 1</h4>
+                                            <p style='font-size:0.9rem;color:var(--color-gray-light);'
+                                                data-i18n="qna.items.1.details.v1Desc">For cars with
                                                 <strong>Top Mounted</strong> pedals.
                                             </p>
                                         </div>
                                         <div style='text-align:center;'>
                                             <img src='img/floor_mounted.jpeg' alt='Version 2 - Bottom Mounted'
                                                 style='width:100%;max-width:320px;border-radius:8px;margin: 0 auto 0.5rem auto;'>
-                                            <h4>Version 2</h4>
-                                            <p style='font-size:0.9rem;color:var(--color-gray-light);'>For cars with
+                                            <h4 data-i18n="qna.items.1.details.v2Title">Version 2</h4>
+                                            <p style='font-size:0.9rem;color:var(--color-gray-light);'
+                                                data-i18n="qna.items.1.details.v2Desc">For cars with
                                                 <strong>Floor Mounted</strong> pedals.
                                             </p>
                                         </div>
                                     </div>
-                                    <p>Please check your vehicle's pedals before ordering to ensure the perfect fit.</p>
+                                    <p data-i18n="qna.items.1.details.footer">Please check your vehicle's pedals before
+                                        ordering to ensure the perfect fit.</p>
                                 </div>
                             </div>
 
                             <!-- Question 3: Slip -->
                             <div class="qna-item" data-index="2">
                                 <button class="qna-question">
-                                    <span>Will the mats slip around?</span>
+                                    <span data-i18n="qna.items.2.question">Will the mats slip around?</span>
                                     <span class="qna-icon"></span>
                                 </button>
-                                <div class="qna-answer">
+                                <div class="qna-answer" data-i18n="qna.items.2.answer">
                                     <p>Our car mats feature a non-slip backing, ensuring they stay securely in place
                                         while you're driving.</p>
                                 </div>
@@ -216,10 +223,10 @@
                             <!-- Question 4: Cleaning -->
                             <div class="qna-item" data-index="3">
                                 <button class="qna-question">
-                                    <span>How do I clean the carmats?</span>
+                                    <span data-i18n="qna.items.3.question">How do I clean the carmats?</span>
                                     <span class="qna-icon"></span>
                                 </button>
-                                <div class="qna-answer">
+                                <div class="qna-answer" data-i18n="qna.items.3.answer">
                                     <p>Our carmats are easy to clean. Simply vacuum regularly to remove loose dirt, and
                                         spot clean with a mild soap and water solution for stains. The materials are
                                         designed to hide dirt well, so they maintain their appearance even between
@@ -230,10 +237,10 @@
                             <!-- Question 5: AliExpress (Moved to Last) -->
                             <div class="qna-item" data-index="4">
                                 <button class="qna-question">
-                                    <span>Are our products from AliExpress?</span>
+                                    <span data-i18n="qna.items.4.question">Are our products from AliExpress?</span>
                                     <span class="qna-icon"></span>
                                 </button>
-                                <div class="qna-answer">
+                                <div class="qna-answer" data-i18n="qna.items.4.answer">
                                     <p>You may see the same products on platforms like AliExpress, Temu, Shein or Etsy
                                         or other brands selling the exact same stuff, but we want to say that we started
                                         in September 2020 and back then we spent a lot of time and money into developing
@@ -251,31 +258,32 @@
         <!-- Comparison Section -->
         <section class="comparison-section">
             <div class="container">
-                <h2 class="section-title animate-on-scroll" style="margin-top: var(--spacing-xl);">Why Choose Zahrato?
+                <h2 class="section-title animate-on-scroll" style="margin-top: var(--spacing-xl);"
+                    data-i18n="comparison.title">Why Choose Zahrato?
                 </h2>
                 <div class="comparison-grid">
                     <!-- Ordinary Side -->
                     <div class="comparison-card ordinary animate-on-scroll delay-100">
-                        <h3 class="comparison-header">Ordinary Car Mats</h3>
+                        <h3 class="comparison-header" data-i18n="comparison.ordinaryTitle">Ordinary Car Mats</h3>
                         <div class="comparison-image">
                             <img src="img/bad_com.png" alt="Ordinary Mats">
                         </div>
                         <ul class="comparison-list">
                             <li>
                                 <span class="icon-x">✕</span>
-                                Thin materials, wear out fast
+                                <span data-i18n="comparison.ordinaryItems.0">Thin materials, wear out fast</span>
                             </li>
                             <li>
                                 <span class="icon-x">✕</span>
-                                Generic mass-produced design
+                                <span data-i18n="comparison.ordinaryItems.1">Generic mass-produced design</span>
                             </li>
                             <li>
                                 <span class="icon-x">✕</span>
-                                Poor fit, limited coverage
+                                <span data-i18n="comparison.ordinaryItems.2">Poor fit, limited coverage</span>
                             </li>
                             <li>
                                 <span class="icon-x">✕</span>
-                                Basic dirt protection
+                                <span data-i18n="comparison.ordinaryItems.3">Basic dirt protection</span>
                             </li>
                         </ul>
                     </div>
@@ -285,26 +293,26 @@
 
                     <!-- Zahrato Side -->
                     <div class="comparison-card zahrato animate-on-scroll delay-200">
-                        <h3 class="comparison-header text-gold">Zahrato Mats</h3>
+                        <h3 class="comparison-header text-gold" data-i18n="comparison.zahratoTitle">Zahrato Mats</h3>
                         <div class="comparison-image">
                             <img src="img/zafran_type1_2.png" alt="Zahrato Mats">
                         </div>
                         <ul class="comparison-list">
                             <li>
                                 <span class="icon-check">✓</span>
-                                High-density, long-lasting materials
+                                <span data-i18n="comparison.zahratoItems.0">High-density, long-lasting materials</span>
                             </li>
                             <li>
                                 <span class="icon-check">✓</span>
-                                Handcrafted oriental design
+                                <span data-i18n="comparison.zahratoItems.1">Handcrafted oriental design</span>
                             </li>
                             <li>
                                 <span class="icon-check">✓</span>
-                                Perfect fit, full coverage
+                                <span data-i18n="comparison.zahratoItems.2">Perfect fit, full coverage</span>
                             </li>
                             <li>
                                 <span class="icon-check">✓</span>
-                                Superior dirt & spill protection
+                                <span data-i18n="comparison.zahratoItems.3">Superior dirt & spill protection</span>
                             </li>
                         </ul>
                     </div>
@@ -315,7 +323,7 @@
         <!-- Reviews Section -->
         <section class="reviews-section" id="reviews">
             <div class="container">
-                <h2 class="section-title animate-on-scroll">Customer Store Reviews</h2>
+                <h2 class="section-title animate-on-scroll" data-i18n="reviews.title">Customer Store Reviews</h2>
 
                 <div class="reviews-grid">
                     <!-- Review 1 -->
@@ -327,7 +335,7 @@
                                         d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                                 </svg>
                             </div>
-                            <p class="review-author">Amir H.</p>
+                            <p class="review-author" data-i18n="reviews.items.0.author">Amir H.</p>
                             <div class="review-stars">
                                 <svg viewBox="0 0 24 24">
                                     <polygon
@@ -352,8 +360,10 @@
                             </div>
                         </div>
                         <p class="review-text">
-                            "ordered this and came fast fitting good i think i would buy again!!"
-                        <p class="translated-from">Translated from Persian</p>
+                            <span data-i18n="reviews.items.0.text">"ordered this and came fast fitting good i think i
+                                would buy again!!"</span>
+                        <p class="translated-from"><span data-i18n="reviews.translatedFrom">Translated from</span> <span
+                                data-i18n="reviews.items.0.originalLanguage">Persian</span></p>
                         </p>
                     </div>
 
@@ -366,7 +376,7 @@
                                         d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                                 </svg>
                             </div>
-                            <p class="review-author">David K.</p>
+                            <p class="review-author" data-i18n="reviews.items.1.author">David K.</p>
                             <div class="review-stars">
                                 <svg viewBox="0 0 24 24">
                                     <polygon
@@ -391,10 +401,10 @@
                             </div>
                         </div>
                         <p class="review-text">
-                            "Saw it on Instagram and i HAD to get it and i wasnt disappointed washed them now once and
-                            they
-                            look great"
-                        <p class="translated-from">Translated from German</p>
+                            <span data-i18n="reviews.items.1.text">"Saw it on Instagram and i HAD to get it and i wasnt
+                                disappointed washed them now once and they look great"</span>
+                        <p class="translated-from"><span data-i18n="reviews.translatedFrom">Translated from</span> <span
+                                data-i18n="reviews.items.1.originalLanguage">German</span></p>
                         </p>
                         <div class="review-images">
                             <img src="img/review_1.jpeg" alt="Customer Photo 1" class="review-img">
@@ -411,7 +421,7 @@
                                         d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                                 </svg>
                             </div>
-                            <p class="review-author">Robert P.</p>
+                            <p class="review-author" data-i18n="reviews.items.2.author">Robert P.</p>
                             <div class="review-stars">
                                 <svg viewBox="0 0 24 24">
                                     <polygon
@@ -435,7 +445,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="review-text">
+                        <p class="review-text" data-i18n="reviews.items.2.text">
                             "I have this red light in my car and it goes together perfect.!"
                         </p>
                         <div class="review-images">
@@ -452,7 +462,7 @@
                                         d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                                 </svg>
                             </div>
-                            <p class="review-author">Michael T.</p>
+                            <p class="review-author" data-i18n="reviews.items.3.author">Michael T.</p>
                             <div class="review-stars">
                                 <svg viewBox="0 0 24 24">
                                     <polygon
@@ -476,7 +486,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="review-text">
+                        <p class="review-text" data-i18n="reviews.items.3.text">
                             "bought them on ali express for cheap but they were so thin that they broke in half now i
                             have
                             this and these are good 👍 "
@@ -492,7 +502,7 @@
                                         d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                                 </svg>
                             </div>
-                            <p class="review-author">Anonymous</p>
+                            <p class="review-author" data-i18n="reviews.items.4.author">Anonymous</p>
                             <div class="review-stars">
                                 <svg viewBox="0 0 24 24">
                                     <polygon
@@ -517,8 +527,10 @@
                             </div>
                         </div>
                         <p class="review-text">
-                            "bought them in the red looking color exactly what i wanted thanks!"
-                        <p class="translated-from">Translated from Arabic</p>
+                            <span data-i18n="reviews.items.4.text">"bought them in the red looking color exactly what i
+                                wanted thanks!"</span>
+                        <p class="translated-from"><span data-i18n="reviews.translatedFrom">Translated from</span> <span
+                                data-i18n="reviews.items.4.originalLanguage">Arabic</span></p>
                         </p>
                     </div>
 
@@ -530,7 +542,7 @@
                                         d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                                 </svg>
                             </div>
-                            <p class="review-author">Amira L.</p>
+                            <p class="review-author" data-i18n="reviews.items.5.author">Amira L.</p>
                             <div class="review-stars">
                                 <svg viewBox="0 0 24 24">
                                     <polygon
@@ -554,7 +566,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="review-text">
+                        <p class="review-text" data-i18n="reviews.items.5.text">
                             "Got 2 colors because we have two cars my kids already played on them in our car and they
                             good
                             dirty but i justed washed them and they look like new again."
@@ -570,7 +582,7 @@
         <!-- Related Products -->
         <section class="related-products">
             <div class="container">
-                <h2 class="section-title">Discover other Designs</h2>
+                <h2 class="section-title" data-i18n="products.relatedTitle">Discover other Designs</h2>
 
                 <div class="products-grid" id="relatedProducts">
                     <!-- Related products loaded dynamically -->
@@ -585,35 +597,41 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">ZAHRATO</a>
-                    <p>Premium oriental car carpets since 2020. Each piece is designed with passion and precision to
+                    <p data-i18n="footer.about">Premium oriental car carpets since 2020. Each piece is designed with
+                        passion and precision to
                         transform your vehicle.</p>
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-title">Shop</h4>
+                    <h4 class="footer-title" data-i18n="footer.shopTitle">Shop</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html#products">All Products</a></li>
+                        <li><a href="index.html#products" data-i18n="footer.allProducts">All Products</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-title">Help</h4>
+                    <h4 class="footer-title" data-i18n="footer.helpTitle">Help</h4>
                     <ul class="footer-links">
-                        <li><a href="#" class="contact-trigger">Contact Us</a></li>
-                        <li><a href="#qnaSection" class="policy-link">FAQs</a></li>
-                        <li><a href="#" class="policy-link" data-policy="shipping">Shipping</a></li>
-                        <li><a href="#" class="policy-link" data-policy="returns">Returns</a></li>
-                        <li><a href="#" class="policy-link" data-policy="legal">Legal Information</a></li>
+                        <li><a href="#" class="contact-trigger" data-i18n="footer.contact">Contact Us</a></li>
+                        <li><a href="#qnaSection" class="policy-link" data-i18n="footer.faqs">FAQs</a></li>
+                        <li><a href="#" class="policy-link" data-policy="shipping"
+                                data-i18n="footer.shipping">Shipping</a></li>
+                        <li><a href="#" class="policy-link" data-policy="returns" data-i18n="footer.returns">Returns</a>
+                        </li>
+                        <li><a href="#" class="policy-link" data-policy="legal" data-i18n="footer.legal">Legal
+                                Information</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-title">Newsletter</h4>
-                    <p style="color: var(--color-gray-light); margin-bottom: 1rem; font-size: 0.875rem;">Subscribe for
+                    <h4 class="footer-title" data-i18n="footer.newsletterTitle">Newsletter</h4>
+                    <p style="color: var(--color-gray-light); margin-bottom: 1rem; font-size: 0.875rem;"
+                        data-i18n="footer.newsletterDesc">Subscribe for
                         exclusive offers and updates.</p>
                     <form class="newsletter-form">
-                        <input type="email" class="newsletter-input" placeholder="Your email" required>
-                        <button type="submit" class="newsletter-btn">Join</button>
+                        <input type="email" class="newsletter-input" placeholder="Your email" required
+                            data-i18n-placeholder="footer.subscribeParams">
+                        <button type="submit" class="newsletter-btn" data-i18n="footer.join">Join</button>
                     </form>
                 </div>
             </div>
@@ -787,8 +805,9 @@
                     </a>
                 </div>
 
-                <p class="footer-copyright">&copy; 2026 ZAHRATO. All rights reserved. Shop made by <a
-                        href="https://benedictjaros.com" class="creator-link">benedictjaros.com</a></p>
+                <p class="footer-copyright"><span data-i18n="footer.copyright">&copy; 2026 ZAHRATO. All rights reserved.
+                        Shop made by</span> <a href="https://benedictjaros.com"
+                        class="creator-link">benedictjaros.com</a></p>
             </div>
         </div>
     </footer>
@@ -798,7 +817,7 @@
         <div class="modal-container">
             <div class="modal-header">
                 <button class="modal-close" id="modalClose">✕</button>
-                <h2 class="modal-title" id="modalTitle">Policy</h2>
+                <h2 class="modal-title" id="modalTitle" data-i18n="policies.modalTitle">Policy</h2>
             </div>
             <div class="modal-content" id="modalContent">
                 <!-- Policy content loaded here -->
@@ -808,30 +827,24 @@
 
     <!-- Contact Modal -->
     <div class="modal-overlay" id="contactModal">
-        <div class="modal-container">
+        <div class="modal-container contact-modal">
             <div class="modal-header">
                 <button class="modal-close" id="contactModalClose">✕</button>
-                <h2 class="modal-title">Contact Us</h2>
+                <h2 class="modal-title" data-i18n="contact.title">Contact Us</h2>
             </div>
             <div class="modal-content">
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="contactName" class="form-label">Full Name</label>
-                        <input type="text" id="contactName" class="newsletter-input" style="width: 100%;"
-                            placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactEmail" class="form-label">Email</label>
-                        <input type="email" id="contactEmail" class="newsletter-input" style="width: 100%;"
-                            placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactMessage" class="form-label">Message</label>
-                        <textarea id="contactMessage" class="newsletter-input" style="width: 100%;"
-                            placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="newsletter-btn" style="width: 100%;">Send Message</button>
-                </form>
+                <p class="contact-intro" data-i18n="contact.intro">Have a question? Drop us an email:</p>
+                <div class="email-display-container">
+                    <span class="email-address" id="contactEmail">support@zahrato.com</span>
+                    <button class="copy-btn" id="copyEmailBtn" aria-label="Copy Email">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span class="copy-tooltip" data-i18n="contact.copied">Copied!</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -844,345 +857,7 @@
     <script src="js/newsletter.js"></script>
     <script src="js/size-modal.js"></script>
     <script src="js/product.js"></script>
-    <script>
-        // Global product data
-        let allProducts = [];
-        let currentProduct = null;
 
-        // Initialize product page
-        document.addEventListener('DOMContentLoaded', function () {
-            loadProductData();
-            initProductPage();
-            initPolicyModal();
-            initContactModal();
-            initQnA();
-        });
-
-        // Load product data from global PRODUCTS_DATA
-        function loadProductData() {
-            // Use products from products.js
-            if (window.PRODUCTS_DATA) {
-                allProducts = window.PRODUCTS_DATA.products;
-            } else {
-                console.error("PRODUCTS_DATA not found");
-                allProducts = [];
-            }
-
-            // Get product ID from URL
-            const urlParams = new URLSearchParams(window.location.search);
-            const productId = parseInt(urlParams.get('id')) || 1;
-
-            currentProduct = allProducts.find(p => p.id === productId) || allProducts[0];
-
-            // Update page with product data
-            updateProductPage(currentProduct);
-            renderRelatedProducts(productId);
-        }
-
-        function updateProductPage(product) {
-            document.getElementById('productTitle').textContent = product.name;
-            document.getElementById('productPrice').textContent = '$' + product.price.toFixed(2);
-            document.getElementById('productDescription').textContent = product.description;
-            document.title = product.name + ' - ZAHRATO';
-
-            // Update product images
-            const mainImage = document.getElementById('mainImage');
-            const thumbnails = document.getElementById('thumbnails');
-
-            if (product.images && product.images.length > 0) {
-                // Set main image with all images for scrolling
-                mainImage.innerHTML = product.images.map((img, index) => `
-                    <div class="product-image-slide" id="slide-${index}" style="min-width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; scroll-snap-align: center;">
-                        <img src="${img}" alt="${product.name} view ${index + 1}"
-                            style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;">
-                    </div>
-                `).join('');
-
-                // Set thumbnails with square aspect ratio
-                thumbnails.innerHTML = product.images.map((img, index) => `
-                        <div class="thumbnail ${index === 0 ? 'active' : ''}" data-index="${index}">
-                            <img src="${img}" alt="${product.name}"
-                                style="width: 100%; aspect-ratio: 1/1; object-fit: cover;">
-                        </div>
-                        `).join('');
-
-                // Re-initialize gallery actions since we replaced DOM
-                setTimeout(initThumbnailGallery, 0);
-            }
-
-            // Update size options if product has specific sizes
-            if (product.sizes) {
-                const sizeSelect = document.getElementById('sizeSelect');
-                sizeSelect.innerHTML = '<option value="">Select a size</option>' +
-                    product.sizes.map(size => `<option value="${size}">${size}</option>`).join('');
-            }
-
-            // Store for cart
-            window.currentProduct = product;
-        }
-
-        function initQnA() {
-            const container = document.getElementById('qnaContainer');
-            // Add click handlers
-            container.querySelectorAll('.qna-question').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const item = this.closest('.qna-item');
-                    const wasActive = item.classList.contains('active');
-
-                    // Close all
-                    container.querySelectorAll('.qna-item').forEach(i => i.classList.remove('active'));
-
-                    // Toggle clicked
-                    if (!wasActive) {
-                        item.classList.add('active');
-                    }
-                });
-            });
-        }
-
-        function renderRelatedProducts(currentId) {
-            const container = document.getElementById('relatedProducts');
-            const related = allProducts.filter(p => p.id !== currentId).slice(0, 3);
-
-            container.innerHTML = related.map(product => {
-                const image = product.images && product.images.length > 0 ? product.images[0] : 'img/product-1.png';
-
-                return `
-                <div class="product-card" data-product-id="${product.id}" onclick="window.location.href='product.html?id=${product.id}'">
-                    <div class="product-card-image transparent-bg">
-                        <img src="${image}" alt="${product.name}" style="width: 100%; aspect-ratio: 1/1; object-fit: contain;">
-                        <div class="product-card-overlay">
-                            <div class="product-info-left">
-                                <h3 class="product-card-title">${product.name}</h3>
-                                <span class="product-card-subtitle">UNIVERSAL CARMATS</span>
-                            </div>
-                            <div class="product-info-right">
-                                <span class="product-card-price">$${product.price.toFixed(2)}</span>
-                                <span class="product-stock-label">LIMITED STOCK</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                `;
-            }).join('');
-        }
-
-        function initProductPage() {
-            initSizeSelector();
-            initQuantityControls();
-            initSizeSelector();
-            initQuantityControls();
-            // initThumbnailGallery called after rendering
-            initAddToCart();
-            initAddToCart();
-            // No color selection needed
-            window.selectedColor = null;
-        }
-
-        function initSizeSelector() {
-            const sizeSelect = document.getElementById('sizeSelect');
-            if (sizeSelect) {
-                sizeSelect.addEventListener('change', function () {
-                    window.selectedSize = this.value;
-                });
-            }
-            window.selectedSize = '';
-        }
-
-        function initQuantityControls() {
-            const quantityInput = document.getElementById('quantityInput');
-            const decreaseBtn = document.getElementById('decreaseQty');
-            const increaseBtn = document.getElementById('increaseQty');
-
-            if (!quantityInput || !decreaseBtn || !increaseBtn) return;
-
-            decreaseBtn.addEventListener('click', function () {
-                let value = parseInt(quantityInput.value);
-                if (value > 1) {
-                    quantityInput.value = value - 1;
-                    this.style.transform = 'scale(0.9)';
-                    setTimeout(() => this.style.transform = '', 100);
-                }
-            });
-
-            increaseBtn.addEventListener('click', function () {
-                let value = parseInt(quantityInput.value);
-                if (value < 10) {
-                    quantityInput.value = value + 1; this.style.transform = 'scale(0.9)';
-                    setTimeout(() => this.style.transform = '', 100);
-                }
-            });
-        }
-
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('mobileMenuToggle');
-        const mainNav = document.getElementById('mainNav');
-
-        menuToggle.addEventListener('click', function () {
-            this.classList.toggle('active');
-            mainNav.classList.toggle('active');
-        });
-
-        // Close menu when a link is clicked
-        mainNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                mainNav.classList.remove('active');
-            });
-        });
-        function initThumbnailGallery() {
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            const mainImage = document.getElementById('mainImage');
-
-            if (!mainImage || thumbnails.length === 0) return;
-
-            // Thumbnail Click -> Scroll to Image
-            thumbnails.forEach((thumb) => {
-                thumb.addEventListener('click', function () {
-                    const index = parseInt(this.dataset.index);
-                    const targetSlide = document.getElementById(`slide-${index}`);
-
-                    if (targetSlide) {
-                        mainImage.scrollTo({
-                            left: targetSlide.offsetLeft,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Scroll -> Update Active Thumbnail
-            mainImage.addEventListener('scroll', () => {
-                const scrollLeft = mainImage.scrollLeft;
-                const width = mainImage.clientWidth;
-                const index = Math.round(scrollLeft / width);
-
-                thumbnails.forEach(t => t.classList.remove('active'));
-                if (thumbnails[index]) {
-                    thumbnails[index].classList.add('active');
-                }
-            });
-        }
-
-        function initAddToCart() {
-            const addToCartBtn = document.getElementById('addToCartBtn');
-
-            if (!addToCartBtn) return;
-
-            addToCartBtn.addEventListener('click', function () {
-                if (!window.selectedSize) {
-                    const sizeSelect = document.getElementById('sizeSelect');
-                    if (sizeSelect) {
-                        sizeSelect.style.borderColor = '#ff4444';
-                        sizeSelect.focus();
-                        setTimeout(() => {
-                            sizeSelect.style.borderColor = '';
-                        }, 2000);
-                    }
-                    // Show custom size required modal
-                    if (typeof showSizeRequiredModal === 'function') {
-                        showSizeRequiredModal();
-                    } else {
-                        alert('Please select a size');
-                    }
-                    return;
-                }
-
-                const product = window.currentProduct;
-                const quantityInput = document.getElementById('quantityInput');
-                const quantity = quantityInput ? parseInt(quantityInput.value) : 1;
-
-                Cart.addItem({
-                    productId: product.id,
-                    name: product.name,
-                    price: product.price,
-                    color: 'N/A',
-                    size: window.selectedSize,
-                    quantity: quantity,
-                    image: product.images ? product.images[0] : `img/product-${product.id}.png`
-                });
-
-                const originalText = addToCartBtn.textContent;
-                addToCartBtn.textContent = 'Added!';
-                addToCartBtn.style.backgroundColor = '#4CAF50';
-
-                setTimeout(() => {
-                    addToCartBtn.textContent = originalText;
-                    addToCartBtn.style.backgroundColor = '';
-                }, 1500);
-            });
-        }
-
-        // Policy Modal
-        function initPolicyModal() {
-            const modal = document.getElementById('policyModal');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalContent = document.getElementById('modalContent');
-            const modalClose = document.getElementById('modalClose');
-
-            document.addEventListener('click', function (e) {
-                if (e.target.classList.contains('policy-link')) {
-                    e.preventDefault();
-                    const policyKey = e.target.dataset.policy;
-                    openPolicyModal(policyKey);
-                }
-            });
-
-            function openPolicyModal(policyKey) {
-                const policy = window.policies[policyKey];
-                if (policy) {
-                    modalTitle.textContent = policy.title;
-                    modalContent.innerHTML = policy.content;
-                    modal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                }
-            }
-
-            modalClose.addEventListener('click', closeModal);
-            modal.addEventListener('click', function (e) {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
-
-            function closeModal() {
-                modal.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && modal.classList.contains('active')) {
-                    closeModal();
-                }
-            });
-        }
-        // Contact Modal
-        function initContactModal() {
-            const contactModal = document.getElementById('contactModal');
-            const contactModalClose = document.getElementById('contactModalClose');
-            const contactTriggers = document.querySelectorAll('.contact-trigger');
-
-            contactTriggers.forEach(trigger => {
-                trigger.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    contactModal.classList.add('active');
-                });
-            });
-
-            if (contactModalClose) {
-                contactModalClose.addEventListener('click', () => {
-                    contactModal.classList.remove('active');
-                });
-            }
-
-            // Close when click outside
-            window.addEventListener('click', (e) => {
-                if (e.target === contactModal) {
-                    contactModal.classList.remove('active');
-                }
-            });
-        }
-    </script>
 
     <!-- Image Modal for Reviews -->
     <div id="imageModal" class="image-modal">
@@ -1190,7 +865,7 @@
         <img class="image-modal-content" id="img01">
     </div>
 
-    <script src="js/reviews.js"></script> <!-- Added Reviews Script -->
+
 </body>
 
 </html>

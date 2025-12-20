@@ -23,10 +23,10 @@
             <a href="index.html" class="logo">ZAHRATO</a>
 
             <nav class="nav-main" id="mainNav">
-                <a href="index.html">Home</a>
-                <a href="index.html#products">Shop</a>
-                <a href="index.html#reviews">Reviews</a>
-                <a href="#" class="contact-trigger">Contact Us</a>
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="index.html#products" data-i18n="nav.shop">Shop</a>
+                <a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a>
+                <a href="#" class="contact-trigger" data-i18n="nav.contact">Contact Us</a>
             </nav>
 
             <div class="header-actions">
@@ -46,13 +46,13 @@
     <main class="cart-page">
         <div class="container cart-container">
             <div class="cart-header">
-                <h1>Shopping Cart</h1>
+                <h1 data-i18n="cart.title">Shopping Cart</h1>
             </div>
 
             <!-- Empty Cart State -->
             <div class="cart-empty" id="cartEmpty" style="display: none;">
-                <p>Your cart is empty</p>
-                <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+                <p data-i18n="cart.empty">Your cart is empty</p>
+                <a href="index.html" class="btn btn-primary" data-i18n="cart.continue">Continue Shopping</a>
             </div>
 
             <!-- Cart Content -->
@@ -64,28 +64,28 @@
 
                 <!-- Cart Summary -->
                 <div class="cart-summary">
-                    <h2>Order Summary</h2>
+                    <h2 data-i18n="cart.summaryTitle">Order Summary</h2>
 
                     <div class="summary-row">
-                        <span>Subtotal</span>
-                        <span id="cartSubtotal">$0.00</span>
+                        <span data-i18n="cart.subtotal">Subtotal</span>
+                        <span id="cartSubtotal">€0.00</span>
                     </div>
 
                     <div class="summary-row">
-                        <span>Shipping</span>
-                        <span id="cartShipping">Free</span>
+                        <span data-i18n="cart.shipping">Shipping</span>
+                        <span id="cartShipping" data-i18n="cart.free">Free</span>
                     </div>
 
                     <div class="summary-row total">
-                        <span>Total</span>
-                        <span class="amount" id="cartTotal">$0.00</span>
+                        <span data-i18n="cart.total">Total</span>
+                        <span class="amount" id="cartTotal">€0.00</span>
                     </div>
 
-                    <button class="btn btn-primary checkout-btn" id="checkoutBtn">
+                    <button class="btn btn-primary checkout-btn" id="checkoutBtn" data-i18n="cart.checkout">
                         Proceed to Checkout
                     </button>
 
-                    <a href="index.html" class="continue-shopping">Continue Shopping</a>
+                    <a href="index.html" class="continue-shopping" data-i18n="cart.continue">Continue Shopping</a>
                 </div>
             </div>
         </div>
@@ -97,35 +97,41 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">ZAHRATO</a>
-                    <p>Premium oriental car carpets since 2020. Each piece is designed with passion and precision to
+                    <p data-i18n="footer.about">Premium oriental car carpets since 2020. Each piece is designed with
+                        passion and precision to
                         transform your vehicle.</p>
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-title">Shop</h4>
+                    <h4 class="footer-title" data-i18n="footer.shopTitle">Shop</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html#products">All Products</a></li>
+                        <li><a href="index.html#products" data-i18n="footer.allProducts">All Products</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-title">Help</h4>
+                    <h4 class="footer-title" data-i18n="footer.helpTitle">Help</h4>
                     <ul class="footer-links">
-                        <li><a href="#" class="contact-trigger">Contact Us</a></li>
-                        <li><a href="index.html#qnaSection" class="policy-link">FAQs</a></li>
-                        <li><a href="#" class="policy-link" data-policy="shipping">Shipping</a></li>
-                        <li><a href="#" class="policy-link" data-policy="returns">Returns</a></li>
-                        <li><a href="#" class="policy-link" data-policy="legal">Legal Information</a></li>
+                        <li><a href="#" class="contact-trigger" data-i18n="nav.contact">Contact Us</a></li>
+                        <li><a href="index.html#qnaSection" class="policy-link" data-i18n="footer.faqs">FAQs</a></li>
+                        <li><a href="#" class="policy-link" data-policy="shipping"
+                                data-i18n="footer.shipping">Shipping</a></li>
+                        <li><a href="#" class="policy-link" data-policy="returns" data-i18n="footer.returns">Returns</a>
+                        </li>
+                        <li><a href="#" class="policy-link" data-policy="legal" data-i18n="footer.legal">Legal
+                                Information</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-title">Newsletter</h4>
-                    <p style="color: var(--color-gray-light); margin-bottom: 1rem; font-size: 0.875rem;">Subscribe for
+                    <h4 class="footer-title" data-i18n="footer.newsletterTitle">Newsletter</h4>
+                    <p style="color: var(--color-gray-light); margin-bottom: 1rem; font-size: 0.875rem;"
+                        data-i18n="footer.newsletterDesc">Subscribe for
                         exclusive offers and updates.</p>
                     <form class="newsletter-form">
-                        <input type="email" class="newsletter-input" placeholder="Your email" required>
-                        <button type="submit" class="newsletter-btn">Join</button>
+                        <input type="email" class="newsletter-input" placeholder="Your email" required
+                            data-i18n-placeholder="footer.subscribeParams">
+                        <button type="submit" class="newsletter-btn" data-i18n="footer.join">Join</button>
                     </form>
                 </div>
             </div>
@@ -299,8 +305,9 @@
                     </a>
                 </div>
 
-                <p class="footer-copyright">&copy; 2026 ZAHRATO. All rights reserved. Shop made by <a
-                        href="https://benedictjaros.com" class="creator-link">benedictjaros.com</a></p>
+                <p class="footer-copyright"><span data-i18n="footer.copyright">&copy; 2026 ZAHRATO. All rights reserved.
+                        Shop made by</span> <a href="https://benedictjaros.com"
+                        class="creator-link">benedictjaros.com</a></p>
             </div>
         </div>
     </footer>
@@ -320,138 +327,44 @@
 
     <!-- Contact Modal -->
     <div class="modal-overlay" id="contactModal">
-        <div class="modal-container">
+        <div class="modal-container contact-modal">
             <div class="modal-header">
                 <button class="modal-close" id="contactModalClose">✕</button>
-                <h2 class="modal-title">Contact Us</h2>
+                <h2 class="modal-title" data-i18n="contact.title">Contact Us</h2>
             </div>
             <div class="modal-content">
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="contactName" class="form-label">Full Name</label>
-                        <input type="text" id="contactName" class="newsletter-input" style="width: 100%;"
-                            placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactEmail" class="form-label">Email</label>
-                        <input type="email" id="contactEmail" class="newsletter-input" style="width: 100%;"
-                            placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactMessage" class="form-label">Message</label>
-                        <textarea id="contactMessage" class="newsletter-input" style="width: 100%;"
-                            placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="newsletter-btn" style="width: 100%;">Send Message</button>
-                </form>
+                <p class="contact-intro" data-i18n="contact.intro">Have a question? Drop us an email:</p>
+                <div class="email-display-container">
+                    <span class="email-address" id="contactEmail">support@zahrato.com</span>
+                    <button class="copy-btn" id="copyEmailBtn" aria-label="Copy Email">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span class="copy-tooltip" data-i18n="contact.copied">Copied!</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/language-manager.js"></script>
+    <script src="js/products.js"></script>
     <script src="js/shopify.js"></script>
     <script src="js/cart.js"></script>
-    <script src="js/products.js"></script>
     <script src="js/newsletter.js"></script>
+    <script src="js/ui.js"></script>
     <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('mobileMenuToggle');
-        const mainNav = document.getElementById('mainNav');
-
-        menuToggle.addEventListener('click', function () {
-            this.classList.toggle('active');
-            mainNav.classList.toggle('active');
-        });
-
-        // Close menu when a link is clicked
-        mainNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                mainNav.classList.remove('active');
-            });
-        });
-
         // Initialize cart page
         document.addEventListener('DOMContentLoaded', function () {
             renderCartPage();
-            initPolicyModal();
-            initContactModal();
+            // Other UI components initialized in ui.js
         });
-
-        // Policy Modal
-        function initPolicyModal() {
-            const modal = document.getElementById('policyModal');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalContent = document.getElementById('modalContent');
-            const modalClose = document.getElementById('modalClose');
-
-            document.addEventListener('click', function (e) {
-                if (e.target.classList.contains('policy-link')) {
-                    e.preventDefault();
-                    const policyKey = e.target.dataset.policy;
-                    openPolicyModal(policyKey);
-                }
-            });
-
-            function openPolicyModal(policyKey) {
-                // Use global PRODUCTS_DATA policies
-                if (!window.PRODUCTS_DATA || !window.PRODUCTS_DATA.policies) return;
-                const policy = window.PRODUCTS_DATA.policies[policyKey];
-
-                if (policy) {
-                    modalTitle.textContent = policy.title;
-                    modalContent.innerHTML = policy.content;
-                    modal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                }
-            }
-
-            modalClose.addEventListener('click', closeModal);
-            modal.addEventListener('click', function (e) {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
-
-            function closeModal() {
-                modal.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && modal.classList.contains('active')) {
-                    closeModal();
-                }
-            });
-        }
-
-        // Contact Modal
-        function initContactModal() {
-            const contactModal = document.getElementById('contactModal');
-            const contactModalClose = document.getElementById('contactModalClose');
-            const contactTriggers = document.querySelectorAll('.contact-trigger');
-
-            contactTriggers.forEach(trigger => {
-                trigger.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    contactModal.classList.add('active');
-                });
-            });
-
-            if (contactModalClose) {
-                contactModalClose.addEventListener('click', () => {
-                    contactModal.classList.remove('active');
-                });
-            }
-
-            // Close when click outside
-            window.addEventListener('click', (e) => {
-                if (e.target === contactModal) {
-                    contactModal.classList.remove('active');
-                }
-            });
-        }
     </script>
+
 </body>
 
 </html>

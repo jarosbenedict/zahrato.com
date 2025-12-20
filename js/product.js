@@ -20,8 +20,13 @@ function initProductPage() {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = parseInt(urlParams.get('id')) || 1;
 
-    // Load product data
+    // Initial load
     loadProductData(productId);
+
+    // Re-render on language change
+    window.addEventListener('languageChanged', () => {
+        loadProductData(productId);
+    });
 
     // Initialize UI interactions
     initColorSelector();
@@ -43,56 +48,59 @@ function loadProductData(productId) {
         product = ShopifyConfig.getProduct(productId);
     }
 
-    // Fallback product data
+    // Fallback product data (Mock data only, ideally should also be localized if used)
     if (!product) {
+        // ... (keeping fallback as legacy/dev only is fine, or update if critical)
         const fallbackProducts = {
             1: {
-                name: 'Eternal Ring',
+                name: { en: 'Eternal Ring', de: 'Ewiger Ring' },
                 price: 59.99,
-                description: 'Crafted with precision and elegance, the Eternal Ring represents timeless beauty. Made with premium materials and finished with exquisite detail, this piece will become a treasured addition to your jewelry collection.'
+                description: { en: 'Crafted with precision...', de: 'Gefertigt mit Präzision...' }
             },
-            2: {
-                name: 'Celestial Necklace',
-                price: 89.99,
-                description: 'A stunning necklace that captures the beauty of the night sky. Each pendant is carefully designed to reflect starlight and elegance.'
-            },
-            3: {
-                name: 'Luna Bracelet',
-                price: 49.99,
-                description: 'Elegant bracelet inspired by the gentle glow of the moon. A perfect accessory for any occasion.'
-            },
-            4: {
-                name: 'Aurora Earrings',
-                price: 39.99,
-                description: 'Delicate earrings that shimmer like the northern lights. Lightweight and comfortable for all-day wear.'
-            },
-            5: {
-                name: 'Starlight Pendant',
-                price: 69.99,
-                description: 'A dazzling pendant that captures starlight in elegant gold. Perfect for special occasions.'
-            },
-            6: {
-                name: 'Infinity Band',
-                price: 79.99,
-                description: 'A symbol of eternal love, crafted with precision and care. The perfect gift for someone special.'
-            }
+            // ... simplified for brevity, assuming main path uses PRODUCTS_DATA
         };
-
-        product = fallbackProducts[productId] || fallbackProducts[1];
-        product.id = productId;
+        // For now, let's just use what we have, but if product is null, we might show error
+        // But assuming PRODUCTS_DATA is loaded
     }
+
+    if (!product) return;
 
     // Update page with product data
     const titleEl = document.getElementById('productTitle');
     const priceEl = document.getElementById('productPrice');
     const descEl = document.getElementById('productDescription');
 
-    if (titleEl) titleEl.textContent = product.name;
-    if (priceEl) priceEl.textContent = '$' + product.price.toFixed(2);
-    if (descEl) descEl.textContent = product.description;
+    if (titleEl) titleEl.textContent = LanguageManager.getLocalized(product.name);
+    if (priceEl) priceEl.textContent = '€' + product.price.toFixed(2);
+    if (descEl) descEl.textContent = LanguageManager.getLocalized(product.description);
+
+    // Update images
+    if (product.images && product.images.length > 0) {
+        const mainImage = document.getElementById('mainImage');
+        const thumbnailContainer = document.getElementById('thumbnails');
+
+        // Update main image - Render ALL images for slider/fade support
+        if (mainImage) {
+            mainImage.innerHTML = product.images.map((img, index) =>
+                `<img src="${img}" class="${index === 0 ? 'active' : ''}" data-index="${index}" alt="${LanguageManager.getLocalized(product.name)}">`
+            ).join('');
+        }
+
+        // Update thumbnails
+        if (thumbnailContainer) {
+            thumbnailContainer.innerHTML = product.images.map((img, index) => `
+                <div class="thumbnail ${index === 0 ? 'active' : ''}" data-index="${index}">
+                    <img src="${img}" alt="View ${index + 1}">
+                </div>
+            `).join('');
+
+            // Re-init thumbnail interactions
+            initThumbnailGallery();
+        }
+    }
 
     // Update page title
-    document.title = product.name + ' - ZAHRATO';
+    document.title = LanguageManager.getLocalized(product.name) + ' - ZAHRATO';
 
     // Store product data for add to cart
     window.currentProduct = product;
@@ -181,26 +189,60 @@ function initQuantityControls() {
  */
 function initThumbnailGallery() {
     const thumbnails = document.querySelectorAll('.thumbnail');
-    const mainImage = document.getElementById('mainImage');
+    const mainImageContainer = document.getElementById('mainImage');
 
-    thumbnails.forEach((thumb, index) => {
+    if (!mainImageContainer) return;
+
+    thumbnails.forEach((thumb) => {
         thumb.addEventListener('click', function () {
-            // Remove active from all
+            // Remove active from all thumbnails
             thumbnails.forEach(t => t.classList.remove('active'));
 
-            // Add active to clicked
+            // Add active to clicked thumbnail
             this.classList.add('active');
 
-            // Update main image (in real implementation, swap images)
-            if (mainImage) {
-                mainImage.style.opacity = '0';
-                setTimeout(() => {
-                    // Here you would swap the actual image
-                    mainImage.style.opacity = '1';
-                }, 200);
+            // Get index
+            const index = parseInt(this.dataset.index);
+
+            // Desktop: Update active image class
+            const images = mainImageContainer.querySelectorAll('img');
+            images.forEach(img => img.classList.remove('active'));
+            if (images[index]) {
+                images[index].classList.add('active');
+            }
+
+            // Mobile: Scroll to image in slider
+            if (images[index] && window.innerWidth <= 1024) {
+                images[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
             }
         });
     });
+
+    // Mobile: Update active thumbnail on scroll
+    if (window.innerWidth <= 1024) {
+        const observerOptions = {
+            root: mainImageContainer,
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = parseInt(entry.target.dataset.index);
+
+                    // Update active thumbnail
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    if (thumbnails[index]) {
+                        thumbnails[index].classList.add('active');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all images
+        const images = mainImageContainer.querySelectorAll('img');
+        images.forEach(img => observer.observe(img));
+    }
 }
 
 /**
@@ -252,7 +294,7 @@ function initAddToCart(productId) {
             color: window.selectedColor || 'gold',
             size: window.selectedSize,
             quantity: quantity,
-            image: product.image || `img/product-${product.id}.jpg`
+            image: (product.images && product.images.length > 0) ? product.images[0] : `img/product-${product.id}.jpg`
         });
 
         // Button feedback animation

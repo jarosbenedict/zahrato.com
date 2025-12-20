@@ -49,24 +49,25 @@ function initHeaderScroll() {
 
     let lastScroll = 0;
 
+    // Use requestAnimationFrame for performance
+    let ticking = false;
+
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const currentScroll = window.pageYOffset;
 
-        // Add/remove scrolled class
-        if (currentScroll > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+                // Add/remove scrolled class
+                if (currentScroll > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                ticking = false;
+            });
+            ticking = true;
         }
-
-        // Hide/show header on scroll direction (optional)
-        // if (currentScroll > lastScroll && currentScroll > 200) {
-        //     header.style.transform = 'translateY(-100%)';
-        // } else {
-        //     header.style.transform = 'translateY(0)';
-        // }
-
-        lastScroll = currentScroll;
     });
 
     // Add scrolled class styles dynamically

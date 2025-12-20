@@ -28,10 +28,10 @@
 
             <!-- Navigation -->
             <nav class="nav-main" id="mainNav">
-                <a href="index.html">Home</a>
-                <a href="#products">Shop</a>
-                <a href="#reviews">Reviews</a>
-                <a href="#" class="contact-trigger">Contact Us</a>
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="#products" data-i18n="nav.shop">Shop</a>
+                <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+                <a href="#" class="contact-trigger" data-i18n="nav.contact">Contact Us</a>
             </nav>
 
             <div class="header-actions">
@@ -55,16 +55,16 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">ZAHRATO</h1>
-            <p class="hero-subtitle">PREMIUM ORIENTAL CAR CARPETS</p>
-            <a href="#products" class="btn btn-primary">Shop Now</a>
+            <h1 class="hero-title" data-i18n="hero.title">ZAHRATO</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">PREMIUM ORIENTAL CAR CARPETS</p>
+            <a href="#products" class="btn btn-primary" data-i18n="hero.cta">Shop Now</a>
         </div>
     </section>
 
     <!-- Products Section -->
     <section class="products-section" id="products">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Our Collection</h2>
+            <h2 class="section-title animate-on-scroll" data-i18n="products.title">Our Collection</h2>
 
             <div class="products-grid" id="productsGrid">
                 <!-- Products loaded dynamically by JavaScript -->
@@ -76,15 +76,15 @@
     <section style="margin-bottom: 50px;" class="qna-section" id="qnaSection"
         style="margin-top: 0; padding-top: var(--spacing-3xl); border-top: none;">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Questions & Answers</h2>
+            <h2 class="section-title animate-on-scroll" data-i18n="qna.title">Questions & Answers</h2>
             <div id="qnaContainer" class="animate-on-scroll">
                 <!-- Question 1: Tracking -->
                 <div class="qna-item" data-index="0">
                     <button class="qna-question">
-                        <span>How can I track my order?</span>
+                        <span data-i18n="qna.items.0.question">How can I track my order?</span>
                         <span class="qna-icon"></span>
                     </button>
-                    <div class="qna-answer">
+                    <div class="qna-answer" data-i18n="qna.items.0.answer">
                         <p>Once your order ships, you'll receive a tracking number via email. You can use this to track
                             your package through our shipping partner's website. If you need help tracking your order,
                             contact our customer service team.</p>
@@ -94,39 +94,43 @@
                 <!-- Question 2: Fit (Version Info) -->
                 <div class="qna-item" data-index="1">
                     <button class="qna-question">
-                        <span>Do they fit in all cars?</span>
+                        <span data-i18n="qna.items.1.question">Do they fit in all cars?</span>
                         <span class="qna-icon"></span>
                     </button>
                     <div class="qna-answer">
-                        <h3>Choose the Right Version</h3>
-                        <p>We offer two versions tailored to your vehicle's pedal configuration:</p>
+                        <h3 data-i18n="qna.items.1.details.title">Choose the Right Version</h3>
+                        <p data-i18n="qna.items.1.details.intro">We offer two versions tailored to your vehicle's pedal
+                            configuration:</p>
                         <div style='display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0;'>
                             <div style='text-align:center;'>
                                 <img src='img/top_mounted.jpeg' alt='Version 1 - Top Mounted'
                                     style='width:100%;max-width:320px;border-radius:8px;margin: 0 auto 0.5rem auto;'>
-                                <h4>Version 1</h4>
-                                <p style='font-size:0.9rem;color:var(--color-gray-light);'>For cars with <strong>Top
+                                <h4 data-i18n="qna.items.1.details.v1Title">Version 1</h4>
+                                <p style='font-size:0.9rem;color:var(--color-gray-light);'
+                                    data-i18n="qna.items.1.details.v1Desc">For cars with <strong>Top
                                         Mounted</strong> pedals.</p>
                             </div>
                             <div style='text-align:center;'>
                                 <img src='img/floor_mounted.jpeg' alt='Version 2 - Bottom Mounted'
                                     style='width:100%;max-width:320px;border-radius:8px;margin: 0 auto 0.5rem auto;'>
-                                <h4>Version 2</h4>
-                                <p style='font-size:0.9rem;color:var(--color-gray-light);'>For cars with <strong>Floor
+                                <h4 data-i18n="qna.items.1.details.v2Title">Version 2</h4>
+                                <p style='font-size:0.9rem;color:var(--color-gray-light);'
+                                    data-i18n="qna.items.1.details.v2Desc">For cars with <strong>Floor
                                         Mounted</strong> pedals.</p>
                             </div>
                         </div>
-                        <p>Please check your vehicle's pedals before ordering to ensure the perfect fit.</p>
+                        <p data-i18n="qna.items.1.details.footer">Please check your vehicle's pedals before ordering to
+                            ensure the perfect fit.</p>
                     </div>
                 </div>
 
                 <!-- Question 3: Slip -->
                 <div class="qna-item" data-index="2">
                     <button class="qna-question">
-                        <span>Will the mats slip around?</span>
+                        <span data-i18n="qna.items.2.question">Will the mats slip around?</span>
                         <span class="qna-icon"></span>
                     </button>
-                    <div class="qna-answer">
+                    <div class="qna-answer" data-i18n="qna.items.2.answer">
                         <p>Our car mats feature a non-slip backing, ensuring they stay securely in place while you're
                             driving.</p>
                     </div>
@@ -135,10 +139,10 @@
                 <!-- Question 4: Cleaning -->
                 <div class="qna-item" data-index="3">
                     <button class="qna-question">
-                        <span>How do I clean the carmats?</span>
+                        <span data-i18n="qna.items.3.question">How do I clean the carmats?</span>
                         <span class="qna-icon"></span>
                     </button>
-                    <div class="qna-answer">
+                    <div class="qna-answer" data-i18n="qna.items.3.answer">
                         <p>Our carmats are easy to clean. Simply vacuum regularly to remove loose dirt, and spot clean
                             with a mild soap and water solution for stains. The materials are designed to hide dirt
                             well, so they maintain their appearance even between cleanings.</p>
@@ -148,14 +152,13 @@
                 <!-- Question 5: AliExpress -->
                 <div class="qna-item" data-index="4">
                     <button class="qna-question">
-                        <span>Are our products from AliExpress?</span>
+                        <span data-i18n="qna.items.4.question">Are our products from AliExpress?</span>
                         <span class="qna-icon"></span>
                     </button>
-                    <div class="qna-answer">
-                        <p>You may see the same products on platforms like AliExpress, Temu, Shein or Etsy or other
-                            brands selling the exact same stuff, but we want to say that we started in September 2020
-                            and back then we spent a lot of time and money into developing this product. There were no
-                            AliExpress products or other brands selling the same products.</p>
+                    <div class="qna-answer" data-i18n="qna.items.4.answer">
+                        <p>You may see the same products on platforms like AliExpress, Temu, Shein or Etsy, but we
+                            started in September 2020 and spent a lot of time developing this product. There were no
+                            AliExpress products selling the same item back then.</p>
                     </div>
                 </div>
             </div>
@@ -165,7 +168,7 @@
     <!-- Reviews Section -->
     <section class="reviews-section" id="reviews">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Customer Store Reviews</h2>
+            <h2 class="section-title animate-on-scroll" data-i18n="reviews.title">Customer Store Reviews</h2>
 
             <div class="reviews-grid">
                 <!-- Review 1 -->
@@ -177,7 +180,7 @@
                                     d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                             </svg>
                         </div>
-                        <p class="review-author">Amir H.</p>
+                        <p class="review-author" data-i18n="reviews.items.0.author">Amir H.</p>
                         <div class="review-stars">
                             <svg viewBox="0 0 24 24">
                                 <polygon
@@ -202,8 +205,10 @@
                         </div>
                     </div>
                     <p class="review-text">
-                        "ordered this and came fast fitting good i think i would buy again!!"
-                    <p class="translated-from">Translated from Persian</p>
+                        <span data-i18n="reviews.items.0.text">"ordered this and came fast fitting good i think i would
+                            buy again!!"</span>
+                    <p class="translated-from"><span data-i18n="reviews.translatedFrom">Translated from</span> <span
+                            data-i18n="reviews.items.0.originalLanguage">Persian</span></p>
                     </p>
                 </div>
 
@@ -216,7 +221,7 @@
                                     d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                             </svg>
                         </div>
-                        <p class="review-author">David K.</p>
+                        <p class="review-author" data-i18n="reviews.items.1.author">David K.</p>
                         <div class="review-stars">
                             <svg viewBox="0 0 24 24">
                                 <polygon
@@ -241,9 +246,10 @@
                         </div>
                     </div>
                     <p class="review-text">
-                        "Saw it on Instagram and i HAD to get it and i wasnt disappointed washed them now once and they
-                        look great"
-                    <p class="translated-from">Translated from German</p>
+                        <span data-i18n="reviews.items.1.text">"Saw it on Instagram and i HAD to get it and i wasnt
+                            disappointed washed them now once and they look great"</span>
+                    <p class="translated-from"><span data-i18n="reviews.translatedFrom">Translated from</span> <span
+                            data-i18n="reviews.items.1.originalLanguage">German</span></p>
                     </p>
                     <div class="review-images">
                         <img src="img/review_1.jpeg" alt="Customer Photo 1" class="review-img">
@@ -260,7 +266,7 @@
                                     d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                             </svg>
                         </div>
-                        <p class="review-author">Robert P.</p>
+                        <p class="review-author" data-i18n="reviews.items.2.author">Robert P.</p>
                         <div class="review-stars">
                             <svg viewBox="0 0 24 24">
                                 <polygon
@@ -284,7 +290,7 @@
                             </svg>
                         </div>
                     </div>
-                    <p class="review-text">
+                    <p class="review-text" data-i18n="reviews.items.2.text">
                         "I have this red light in my car and it goes together perfect.!"
                     </p>
                     <div class="review-images">
@@ -301,7 +307,7 @@
                                     d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                             </svg>
                         </div>
-                        <p class="review-author">Michael T.</p>
+                        <p class="review-author" data-i18n="reviews.items.3.author">Michael T.</p>
                         <div class="review-stars">
                             <svg viewBox="0 0 24 24">
                                 <polygon
@@ -325,7 +331,7 @@
                             </svg>
                         </div>
                     </div>
-                    <p class="review-text">
+                    <p class="review-text" data-i18n="reviews.items.3.text">
                         "bought them on ali express for cheap but they were so thin that they broke in half now i have
                         this and these are good 👍 "
                     </p>
@@ -340,7 +346,7 @@
                                     d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                             </svg>
                         </div>
-                        <p class="review-author">Anonymous</p>
+                        <p class="review-author" data-i18n="reviews.items.4.author">Anonymous</p>
                         <div class="review-stars">
                             <svg viewBox="0 0 24 24">
                                 <polygon
@@ -365,8 +371,10 @@
                         </div>
                     </div>
                     <p class="review-text">
-                        "bought them in the red looking color exactly what i wanted thanks!"
-                    <p class="translated-from">Translated from Arabic</p>
+                        <span data-i18n="reviews.items.4.text">"bought them in the red looking color exactly what i
+                            wanted thanks!"</span>
+                    <p class="translated-from"><span data-i18n="reviews.translatedFrom">Translated from</span> <span
+                            data-i18n="reviews.items.4.originalLanguage">Arabic</span></p>
                     </p>
                 </div>
 
@@ -378,7 +386,7 @@
                                     d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                             </svg>
                         </div>
-                        <p class="review-author">Amira L.</p>
+                        <p class="review-author" data-i18n="reviews.items.5.author">Amira L.</p>
                         <div class="review-stars">
                             <svg viewBox="0 0 24 24">
                                 <polygon
@@ -402,7 +410,7 @@
                             </svg>
                         </div>
                     </div>
-                    <p class="review-text">
+                    <p class="review-text" data-i18n="reviews.items.5.text">
                         "Got 2 colors because we have two cars my kids already played on them in our car and they good
                         dirty but i justed washed them and they look like new again."
                     </p>
@@ -420,35 +428,41 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">ZAHRATO</a>
-                    <p>Premium oriental car carpets since 2020. Each piece is designed with passion and precision to
+                    <p data-i18n="footer.about">Premium oriental car carpets since 2020. Each piece is designed with
+                        passion and precision to
                         transform your vehicle.</p>
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-title">Shop</h4>
+                    <h4 class="footer-title" data-i18n="footer.shopTitle">Shop</h4>
                     <ul class="footer-links">
-                        <li><a href="#products">All Products</a></li>
+                        <li><a href="#products" data-i18n="footer.allProducts">All Products</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-title">Help</h4>
+                    <h4 class="footer-title" data-i18n="footer.helpTitle">Help</h4>
                     <ul class="footer-links">
-                        <li><a href="#" class="contact-trigger">Contact Us</a></li>
-                        <li><a href="#qnaSection" class="policy-link">FAQs</a></li>
-                        <li><a href="#" class="policy-link" data-policy="shipping">Shipping</a></li>
-                        <li><a href="#" class="policy-link" data-policy="returns">Returns</a></li>
-                        <li><a href="#" class="policy-link" data-policy="legal">Legal Information</a></li>
+                        <li><a href="#" class="contact-trigger" data-i18n="footer.contact">Contact Us</a></li>
+                        <li><a href="#qnaSection" class="policy-link" data-i18n="footer.faqs">FAQs</a></li>
+                        <li><a href="#" class="policy-link" data-policy="shipping"
+                                data-i18n="footer.shipping">Shipping</a></li>
+                        <li><a href="#" class="policy-link" data-policy="returns" data-i18n="footer.returns">Returns</a>
+                        </li>
+                        <li><a href="#" class="policy-link" data-policy="legal" data-i18n="footer.legal">Legal
+                                Information</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-title">Newsletter</h4>
-                    <p style="color: var(--color-gray-light); margin-bottom: 1rem; font-size: 0.875rem;">Subscribe for
+                    <h4 class="footer-title" data-i18n="footer.newsletterTitle">Newsletter</h4>
+                    <p style="color: var(--color-gray-light); margin-bottom: 1rem; font-size: 0.875rem;"
+                        data-i18n="footer.newsletterDesc">Subscribe for
                         exclusive offers and updates.</p>
                     <form class="newsletter-form">
-                        <input type="email" class="newsletter-input" placeholder="Your email" required>
-                        <button type="submit" class="newsletter-btn">Join</button>
+                        <input type="email" class="newsletter-input" placeholder="Your email" required
+                            data-i18n-placeholder="footer.subscribeParams">
+                        <button type="submit" class="newsletter-btn" data-i18n="footer.join">Join</button>
                     </form>
                 </div>
             </div>
@@ -622,8 +636,9 @@
                     </a>
                 </div>
 
-                <p class="footer-copyright">&copy; 2026 ZAHRATO. All rights reserved. Shop made by <a
-                        href="https://benedictjaros.com" class="creator-link">benedictjaros.com</a></p>
+                <p class="footer-copyright"><span data-i18n="footer.copyright">&copy; 2026 ZAHRATO. All rights reserved.
+                        Shop made by</span> <a href="https://benedictjaros.com"
+                        class="creator-link">benedictjaros.com</a></p>
             </div>
         </div>
     </footer>
@@ -633,7 +648,7 @@
         <div class="modal-container">
             <div class="modal-header">
                 <button class="modal-close" id="modalClose">✕</button>
-                <h2 class="modal-title" id="modalTitle">Policy</h2>
+                <h2 class="modal-title" id="modalTitle" data-i18n="policies.modalTitle">Policy</h2>
             </div>
             <div class="modal-content" id="modalContent">
                 <!-- Policy content loaded here -->
@@ -643,30 +658,38 @@
 
     <!-- Contact Modal -->
     <div class="modal-overlay" id="contactModal">
-        <div class="modal-container">
+        <div class="modal-container contact-modal">
             <div class="modal-header">
                 <button class="modal-close" id="contactModalClose">✕</button>
-                <h2 class="modal-title">Contact Us</h2>
+                <h2 class="modal-title" data-i18n="contact.title">Contact Us</h2>
             </div>
             <div class="modal-content">
-                <form class="contact-form" action="https://formspree.io/f/xoqgoogr" method="POST">
-                    <div class="form-group">
-                        <label for="contact-email">Email Address</label>
-                        <input type="email" id="contact-email" name="email" required placeholder="Enter your email">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                </form>
+                <p class="contact-intro" data-i18n="contact.intro">Have a question? Drop us an email:</p>
+                <div class="email-display-container">
+                    <span class="email-address" id="contactEmail">support@zahrato.com</span>
+                    <button class="copy-btn" id="copyEmailBtn" aria-label="Copy Email">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span class="copy-tooltip" data-i18n="contact.copied">Copied!</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/language-manager.js"></script>
     <script src="js/products.js"></script>
     <script src="js/newsletter.js"></script>
+    <script src="js/ui.js"></script>
     <script>
         // Render products dynamically from products.js
         document.addEventListener('DOMContentLoaded', function () {
-            initQnA();
+            // QnA and Modals initialized in ui.js
             const productsGrid = document.getElementById('productsGrid');
             if (!productsGrid) return;
 
@@ -685,15 +708,15 @@
                 return `
                 <div class="product-card animate-on-scroll ${delayClass}" data-product-id="${product.id}" onclick="window.location.href='product.html?id=${product.id}'">
                     <div class="product-card-image transparent-bg">
-                        <img src="${image}" alt="${product.name}" style="width: 100%; aspect-ratio: 1/1; object-fit: contain;">
+                        <img src="${image}" alt="${LanguageManager.getLocalized(product.name)}" style="width: 100%; aspect-ratio: 1/1; object-fit: contain;">
                         <div class="product-card-overlay">
                             <div class="product-info-left">
-                                <h3 class="product-card-title">${product.name}</h3>
-                                <span class="product-card-subtitle">UNIVERSAL CARMATS</span>
+                                <h3 class="product-card-title">${LanguageManager.getLocalized(product.name)}</h3>
+                                <span class="product-card-subtitle">${window.t('products.universal')}</span>
                             </div>
                             <div class="product-info-right">
-                                <span class="product-card-price">$${product.price}</span>
-                                <span class="product-stock-label">LIMITED STOCK</span>
+                                <span class="product-card-price">€${product.price}</span>
+                                <span class="product-stock-label">${window.t('products.limitedStock')}</span>
                             </div>
                         </div>
                     </div>
@@ -710,135 +733,6 @@
     <script src="js/shopify.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/animations.js"></script>
-    <script>
-        // Mobile menu toggle
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('mobileMenuToggle');
-        const mainNav = document.getElementById('mainNav');
-
-        menuToggle.addEventListener('click', function () {
-            this.classList.toggle('active'); // Animate button to X
-            mainNav.classList.toggle('active'); // Show/hide menu
-        });
-
-        // Close menu when a link is clicked
-        const menuLinks = mainNav.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                mainNav.classList.remove('active');
-            });
-        });
-
-        // Policy data (embedded for local file access)
-        // Policy data (embedded for local file access)
-        // Use the global policies defined in products.js if available, otherwise fallback (though products.js should be loaded)
-        if (window.PRODUCTS_DATA && window.PRODUCTS_DATA.policies) {
-            window.policies = window.PRODUCTS_DATA.policies;
-        } else {
-            // Fallback if products.js isn't loaded for some reason (should not happen based on script tags)
-            window.policies = {
-                shipping: { title: "Shipping Information", content: "Loading..." },
-                returns: { title: "Returns & Refunds", content: "Loading..." },
-                faq: { title: "FAQs", content: "Loading..." },
-                sizeGuide: { title: "Size Guide", content: "Loading..." }
-            };
-        }
-
-        // Policy Modal
-        const modal = document.getElementById('policyModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalContent = document.getElementById('modalContent');
-        const modalClose = document.getElementById('modalClose');
-
-        // Open modal when policy link clicked
-        document.addEventListener('click', function (e) {
-            if (e.target.classList.contains('policy-link')) {
-                e.preventDefault();
-                const policyKey = e.target.dataset.policy;
-                openPolicyModal(policyKey);
-            }
-        });
-
-        function openPolicyModal(policyKey) {
-            const policy = window.policies[policyKey];
-            if (policy) {
-                modalTitle.textContent = policy.title;
-                modalContent.innerHTML = policy.content;
-                modal.classList.add('active');
-            }
-        }
-
-        // Close Policy Modal
-        modalClose.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
-
-        // Contact Modal Logic
-        const contactModal = document.getElementById('contactModal');
-        const contactModalClose = document.getElementById('contactModalClose');
-        const contactTriggers = document.querySelectorAll('.contact-trigger');
-
-        contactTriggers.forEach(trigger => {
-            trigger.addEventListener('click', (e) => {
-                e.preventDefault();
-                contactModal.classList.add('active');
-            });
-        });
-
-        contactModalClose.addEventListener('click', () => {
-            contactModal.classList.remove('active');
-        });
-
-        // Close modals when clicking outside
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-            }
-            if (e.target === contactModal) {
-                contactModal.classList.remove('active');
-            }
-        });
-
-        // Close modal
-        modalClose.addEventListener('click', closeModal);
-        modal.addEventListener('click', function (e) {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        function closeModal() {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Close modal on escape key
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                closeModal();
-            }
-        });
-
-        function initQnA() {
-            const container = document.getElementById('qnaContainer');
-            if (!container) return;
-            // Add click handlers
-            container.querySelectorAll('.qna-question').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const item = this.closest('.qna-item');
-                    const wasActive = item.classList.contains('active');
-
-                    // Close all
-                    container.querySelectorAll('.qna-item').forEach(i => i.classList.remove('active'));
-
-                    // Toggle clicked
-                    if (!wasActive) {
-                        item.classList.add('active');
-                    }
-                });
-            });
-        }
     </script>
     </script>
 

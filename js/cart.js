@@ -171,7 +171,7 @@ const Cart = {
      * @returns {string} Formatted price string
      */
     formatPrice: function (amount) {
-        return '$' + amount.toFixed(2);
+        return '€' + amount.toFixed(2);
     },
 
     // ============================================
@@ -198,11 +198,15 @@ const Cart = {
         // Create notification element
         const notification = document.createElement('div');
         notification.className = 'cart-notification';
+
+        const translatedName = typeof itemName === 'object' ? LanguageManager.getLocalized(itemName) : itemName;
+        const addedText = window.t ? window.t('notification.added') : 'added to cart';
+
         notification.innerHTML = `
             <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
                 <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
-            <span>${itemName} added to cart</span>
+            <span>${translatedName} ${addedText}</span>
         `;
 
         // Add styles
@@ -295,10 +299,10 @@ function renderCartPage() {
     cartItemsContainer.innerHTML = items.map(item => `
         <div class="cart-item" data-cart-id="${item.cartId}">
             <div class="cart-item-image" style="cursor: pointer;" onclick="window.location.href='product.html?id=${item.productId}'">
-                <img src="${item.image}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: contain;">
+                <img src="${item.image}" alt="${LanguageManager.getLocalized(item.name)}" style="width: 100%; height: 100%; object-fit: contain;">
             </div>
             <div class="cart-item-details" style="cursor: pointer;" onclick="window.location.href='product.html?id=${item.productId}'">
-                <h3>${item.name}</h3>
+                <h3>${LanguageManager.getLocalized(item.name)}</h3>
                 <p class="cart-item-variant">${(item.color && item.color !== 'N/A') ? capitalizeFirst(item.color) + ' / ' : ''}${item.size}</p>
             </div>
         <div class="cart-item-quantity">
@@ -307,7 +311,7 @@ function renderCartPage() {
                     <input type="number" class="quantity-input" value="${item.quantity}" readonly>
                     <button class="quantity-btn" onclick="updateCartItemQuantity('${item.cartId}', ${item.quantity + 1})">+</button>
                 </div>
-                <button class="remove-item" onclick="removeCartItem('${item.cartId}')" aria-label="Remove item">✕</button>
+                <button class="remove-item" onclick="removeCartItem('${item.cartId}')" aria-label="${window.t('cart.remove')}">✕</button>
                 <span class="cart-item-price">${Cart.formatPrice(item.price * item.quantity)}</span>
             </div>
         </div>
@@ -385,7 +389,8 @@ function quickAdd(productId) {
     } else {
         console.error('Product not found for quick add:', productId);
         // Alert user
-        alert('Could not add product to cart. Please try again.');
+        const errorMsg = window.t ? window.t('alerts.addError') : 'Could not add product to cart. Please try again.';
+        alert(errorMsg);
     }
 }
 
@@ -400,7 +405,8 @@ function handleCheckout() {
     const items = Cart.getItems();
 
     if (items.length === 0) {
-        alert('Your cart is empty!');
+        const emptyMsg = window.t ? window.t('alerts.cartEmpty') : 'Your cart is empty!';
+        alert(emptyMsg);
         return;
     }
 
@@ -408,7 +414,8 @@ function handleCheckout() {
         ShopifyConfig.redirectToCheckout(items);
     } else {
         console.error('Shopify configuration not loaded');
-        alert('Checkout is currently unavailable. Please try again later.');
+        const checkoutErrorMsg = window.t ? window.t('alerts.checkoutError') : 'Checkout is currently unavailable. Please try again later.';
+        alert(checkoutErrorMsg);
     }
 }
 

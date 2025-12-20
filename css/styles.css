@@ -2086,7 +2086,95 @@ textarea.newsletter-input {
     list-style: decimal;
 }
 
-/* Policy link styling */
+/* Contact Modal Styles */
+.modal-container.contact-modal {
+    max-width: 550px;
+}
+
+.contact-modal .modal-content {
+    text-align: center;
+}
+
+.contact-intro {
+    font-size: 1rem;
+    color: var(--color-gray-lighter);
+    margin-bottom: 2rem;
+}
+
+.email-display-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--color-gray-dark);
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.email-address {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    color: var(--color-white);
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.copy-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--color-gold);
+    background-color: rgba(197, 164, 126, 0.1);
+    border-radius: 50%;
+    transition: all var(--transition-normal);
+}
+
+.copy-btn:hover {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+    transform: scale(1.05);
+}
+
+.copy-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-gold);
+    color: var(--color-black);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    pointer-events: none;
+    opacity: 0;
+    transition: all var(--transition-normal);
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.copy-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--color-gold) transparent transparent transparent;
+}
+
+.copy-btn.copied .copy-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
 .policy-link {
     cursor: pointer;
     transition: color var(--transition-fast);
@@ -2429,4 +2517,123 @@ textarea.newsletter-input {
         /* Slightly clearer background */
         border-color: rgba(255, 255, 255, 0.4);
     }
+}
+
+/* ============================================
+   Product Gallery
+   ============================================ */
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: 2rem;
+}
+
+.product-main-image {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--color-gray-dark);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    /* Desktop: Stack images for fade effect */
+    display: grid;
+    grid-template-areas: "stack";
+}
+
+.product-main-image.transparent-bg {
+    background-color: transparent;
+}
+
+.product-main-image img {
+    grid-area: stack;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+    /* Prevent interaction with hidden images */
+}
+
+.product-main-image img.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+.product-main-image:hover img.active {
+    transform: scale(1.05);
+}
+
+.product-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.thumbnail {
+    width: 80px;
+    aspect-ratio: 1;
+    background-color: var(--color-gray-dark);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all var(--transition-fast);
+}
+
+.thumbnail.active {
+    border-color: var(--color-gold);
+}
+
+.thumbnail:hover {
+    border-color: rgba(197, 164, 126, 0.5);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================
+   Mobile Swipe Gallery
+   ============================================ */
+@media (max-width: 1024px) {
+    .product-gallery {
+        position: static;
+    }
+
+    .product-main-image {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scroll on iOS */
+        scrollbar-width: none;
+        /* Hide scrollbar Firefox */
+        scroll-behavior: smooth;
+    }
+
+    .product-main-image::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar Chrome/Safari */
+    }
+
+    .product-main-image img {
+        flex: 0 0 100%;
+        width: 100%;
+        scroll-snap-align: center;
+        opacity: 1 !important;
+        /* Force visible for scrolling */
+        pointer-events: auto;
+        transform: none !important;
+        /* Disable zoom on hover for mobile */
+    }
+
+    /* Optional: Provide visual cue if needed, but standard swipe is usually enough */
 }
