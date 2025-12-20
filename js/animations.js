@@ -196,31 +196,37 @@ if (document.querySelector('.hero')) {
 }
 
 /**
- * Lazy loading for images (optional enhancement)
+ * Progressive Image Loading (Fade-in effect)
  */
-function initLazyLoading() {
-    const images = document.querySelectorAll('img[data-src]');
+function initProgressiveLoading() {
+    // Select all images that aren't specifically excluded
+    const images = document.querySelectorAll('img:not(.no-fade)');
 
-    if (images.length === 0) return;
+    images.forEach(img => {
+        // Add initial class
+        img.classList.add('reveal-on-load');
 
-    const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-                imageObserver.unobserve(img);
-            }
-        });
-    }, {
-        rootMargin: '50px'
+        // Check if image is already loaded (from cache)
+        if (img.complete) {
+            requestAnimationFrame(() => {
+                img.classList.add('loaded');
+            });
+        } else {
+            // Wait for load event
+            img.addEventListener('load', () => {
+                img.classList.add('loaded');
+            });
+
+            // Handle error case to ensure invisible images aren't left stuck
+            img.addEventListener('error', () => {
+                img.classList.add('loaded');
+            });
+        }
     });
-
-    images.forEach(img => imageObserver.observe(img));
 }
 
-// Initialize lazy loading
-initLazyLoading();
+// Initialize progressive loading
+initProgressiveLoading();
 
 /**
  * Image zoom effect on hover (for product images)

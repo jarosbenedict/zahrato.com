@@ -2637,3 +2637,16 @@ textarea.newsletter-input {
 
     /* Optional: Provide visual cue if needed, but standard swipe is usually enough */
 }
+
+/* ============================================
+   Progressive Image Loading
+   ============================================ */
+img.reveal-on-load {
+    filter: blur(10px);
+    transition: filter 0.5s ease-out;
+    will-change: filter;
+}
+
+img.reveal-on-load.loaded {
+    filter: blur(0);
+}
